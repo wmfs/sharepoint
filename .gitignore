@@ -177,3 +177,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Don't commit secret SharePoint variables!
+.env
