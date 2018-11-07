@@ -41,13 +41,29 @@ module.exports = async function () {
     console.log(`Modified: ${site.LastItemUserModifiedDate}`)
     console.log('')
 
-    // Get the files
-    const response = await axios.get(
-      `${url}/_api/web/GetFolderByServerRelativeUrl('${process.env.SHAREPOINT_DIR_PATH}')/Files`,
+    // Get the contents
+    const contents = await getContents(url, headers)
+    console.log('Contents:', contents.map(i => i.Name).join(', '))
+
+  } catch (e) {
+    if (e.response) {
+      console.error(`${e.response.status}: ${e.response.statusText}`)
+      console.error(e.response.data.error.code)
+      console.error(e.response.data.error.message.value)
+    } else console.error(e)
+  }
+}
+
+const getContents = async (url, headers) => {
+  const get = type => {
+    return axios.get(
+      `${url}/_api/web/GetFolderByServerRelativeUrl('${process.env.SHAREPOINT_DIR_PATH}')/${type}`,
       { headers, responseType: 'json' }
     )
-    console.log('Files:', response.data.d.results.map(i =>i.Name).join(', '))
-  } catch (e) {
-    console.error(e)
   }
+
+  const folders = await get('Folders')
+  const files = await get('Files')
+
+  return [...folders.data.d.results, ...files.data.d.results]
 }
