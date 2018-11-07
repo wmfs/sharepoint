@@ -40,6 +40,13 @@ module.exports = async function () {
     console.log(`Created: ${site.Created}`)
     console.log(`Modified: ${site.LastItemUserModifiedDate}`)
     console.log('')
+
+    // Get the files
+    const response = await axios.get(
+      `${url}/_api/web/GetFolderByServerRelativeUrl('${process.env.SHAREPOINT_DIR_PATH}')/Files`,
+      { headers, responseType: 'json' }
+    )
+    console.log('Files:', response.data.d.results.map(i =>i.Name).join(', '))
   } catch (e) {
     console.error(e)
   }

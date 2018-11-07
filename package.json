@@ -26,7 +26,6 @@
   },
   "scripts": {
     "start": "node -e \"require('./src/index')()\"",
-    "start:old": "node src/index.old.js",
     "lint": "standard",
     "test": "nyc mocha && standard",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
