@@ -45,11 +45,41 @@ module.exports = async function () {
     const contents = await getContents(url, headers)
     console.log('Contents:', contents.map(i => i.Name).join(', '))
 
+    // Attempt to create a folder
+
+    // const createFolderRes = await axios.post(
+    //   `${url}/_api/web/folders/add('Documents/TEST_FOLDER')`,
+    //   { 
+    //     headers: {
+    //       ...headers,
+    //       // 'X-RequestDigest': 'form digest value', // <--- dunno if this lot are necessary?
+    //       // 'content-type': 'application/json;odata=verbose',
+    //       // 'content-length': 'length of post body'
+    //     },
+    //     responseType: 'json'
+    //   }
+    // )
+
+    const createFolderRes = await axios({
+      method: 'post',
+      url: `${url}/_api/web/folders`,
+      header: {
+        ...headers,
+        'X-RequestDigest': 'form digest value',
+        'content-type': 'application/json;odata=verbose',
+        'content-length': 'length of post body'
+      },
+      responseType: 'json',
+      data: {
+        '__metadata': { 'type': 'SP.Folder' },
+        'ServerRelativeUrl': '/Documents/General/TYMLYNODE/NewTestFolder'
+      }
+    })
+
   } catch (e) {
     if (e.response) {
-      console.error(`${e.response.status}: ${e.response.statusText}`)
-      console.error(e.response.data.error.code)
-      console.error(e.response.data.error.message.value)
+      console.log(`${e.response.status}: ${e.response.statusText}`) 
+      console.log(JSON.stringify(e.response.data))
     } else console.error(e)
   }
 }
