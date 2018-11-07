@@ -19,7 +19,7 @@ module.exports = async function () {
   console.log(`Username: ${credentials.username}`)
   
   try {
-    const { headers } = await getAuth(url, credentials)
+    const { headers } = await spauth.getAuth(url, credentials)
 
     console.log(`Got cookie? ${headers.hasOwnProperty('Cookie')}`)
     console.log(`Auth type: ${headers.Cookie.split('=')[0]}`)
@@ -27,7 +27,7 @@ module.exports = async function () {
     headers['Accept'] = 'application/json;odata=verbose'
 
     // Call the web endpoint
-    const { data } = await getWebEndpoint(`${url}/_api/web`, { headers, responseType: 'json' })
+    const { data } = await axios.get(`${url}/_api/web`, { headers, responseType: 'json' })
 
     const site = data.d
     
@@ -43,22 +43,4 @@ module.exports = async function () {
   } catch (e) {
     console.error(e)
   }
-}
-
-const getAuth = (url, credentials) => {
-  return new Promise((resolve, reject) => {
-    spauth
-    .getAuth(url, credentials)
-    .then(response => resolve(response))
-    .catch(err => reject(err))
-  })
-}
-
-const getWebEndpoint = (url, config) => {
-  return new Promise ((resolve, reject) => {
-    axios
-    .get(url, config)
-    .then(response => resolve(response))
-    .catch(err => reject(err))
-  })
 }
