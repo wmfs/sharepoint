@@ -25,7 +25,8 @@
     "standard": "12.0.1"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node -e \"require('./src/index')()\"",
+    "start:old": "node src/index.old.js",
     "lint": "standard",
     "test": "nyc mocha && standard",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
