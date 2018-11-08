@@ -52,7 +52,6 @@ module.exports = async function () {
 
     // Create a new folder
     const createFolderResponse = await createAFolder('Hello', url, formDigestValue, headers)
-    console.log(createFolderResponse)
     console.log('')
     console.log(`Created folder './${createFolderResponse.Name}' at ${createFolderResponse.TimeCreated} (UniqueId=${createFolderResponse.UniqueId})`)
     console.log('')
