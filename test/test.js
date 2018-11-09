@@ -2,6 +2,8 @@
 'use strict'
 
 const dotEnv = require('dotenv').config()
+const path = require('path')
+const fs = require('fs')
 const chai = require('chai')
 const expect = chai.expect
 
@@ -77,7 +79,7 @@ describe('Tests', function () {
   it('get contents of new folder, expect new file', async () => {
     const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents.length).to.eql(1)
-    expect(contents[0].Name).to.eql('Test.txt')
+    expect(contents[0].Name).to.eql(FILE_NAME)
   })
 
   it('delete the new file', async () => {
@@ -87,6 +89,25 @@ describe('Tests', function () {
   it('get contents of new folder, new file should be deleted', async () => {
     const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents).to.eql([])
+  })
+
+  it('upload file read in from fixtures', async () => {
+    const filepath = path.resolve(__dirname, 'fixtures', FILE_NAME)
+    const base64 = fs.readFileSync(filepath, { encoding: 'base64' })
+    const encodedBase64String = base64.replace(/^data:+[a-z]+\/+[a-z]+;base64,/, '')
+    const binaryData = Buffer.from(encodedBase64String, 'base64')
+
+    await sharepoint.createFile(
+      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      FILE_NAME,
+      binaryData
+    )    
+  })
+
+  it('get contents of new folder, expect new file from fixtures', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    expect(contents.length).to.eql(1)
+    expect(contents[0].Name).to.eql(FILE_NAME)
   })
 
   it('delete a folder', async () => {
