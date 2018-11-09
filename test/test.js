@@ -113,11 +113,11 @@ describe('Tests', function () {
   })
 
   it('create file in new folder', async () => {
-    await sharepoint.createFile(
-      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
-      FILE_NAME,
-      'Testing 1 2 3...'
-    )
+    await sharepoint.createFile({
+      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: FILE_NAME,
+      data: 'Testing 1 2 3...'
+    })
   })
 
   it('get contents of new folder, expect new file', async () => {
@@ -127,7 +127,10 @@ describe('Tests', function () {
   })
 
   it('delete the new file', async () => {
-    await sharepoint.deleteFile(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`, FILE_NAME)
+    await sharepoint.deleteFile({
+      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: FILE_NAME
+    })
   })
 
   it('get contents of new folder, new file should be deleted', async () => {
@@ -136,13 +139,13 @@ describe('Tests', function () {
   })
 
   it('upload file read in from fixtures', async () => {
-    const binaryData = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
 
-    await sharepoint.createFile(
-      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
-      FILE_NAME,
-      binaryData
-    )    
+    await sharepoint.createFile({
+      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: FILE_NAME,
+      data
+    })    
   })
 
   it('get contents of new folder, expect new file from fixtures', async () => {
@@ -152,13 +155,13 @@ describe('Tests', function () {
   })
 
   it('upload file of different format (png) from fixtures', async () => {
-    const binaryData = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
 
-    await sharepoint.createFile(
-      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
-      FILE_NAME_1,
-      binaryData
-    )
+    await sharepoint.createFile({
+      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: FILE_NAME_1,
+      data
+    })
   })
 
   it('get contents of new folder, expect new file of different format (png) from fixtures', async () => {
@@ -168,7 +171,10 @@ describe('Tests', function () {
   })
 
   it('delete a folder', async () => {
-    await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
+    await sharepoint.deleteFolder({
+      dirPath: process.env.SHAREPOINT_DIR_PATH,
+      folderName: FOLDER_NAME
+    })
   })
 
   it('get directory contents, check folder has been deleted', async () => {
