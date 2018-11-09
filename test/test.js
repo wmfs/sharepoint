@@ -81,6 +81,18 @@ describe('Tests', function () {
     expect(contents[0].Name).to.eql('Test.txt')
   })
 
+  it('delete the new file', async () => {
+    await sharepoint.deleteFile(
+      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      FILE_NAME
+    )
+  })
+
+  it('get contents of new folder, new file should be deleted', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    expect(contents).to.eql([])
+  })
+
   it('delete a folder', async () => {
     await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
   })
