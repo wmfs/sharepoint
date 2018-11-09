@@ -27,7 +27,6 @@
     "standard": "12.0.1"
   },
   "scripts": {
-    "start": "node -e \"require('./old/index')()\"",
     "lint": "standard",
     "test": "node ./node_modules/mocha/bin/_mocha",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
