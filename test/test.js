@@ -18,8 +18,7 @@ describe('Tests', function () {
       process.env.SHAREPOINT_URL &&
       process.env.SHAREPOINT_USERNAME &&
       process.env.SHAREPOINT_PASSWORD &&
-      process.env.SHAREPOINT_DIR_PATH &&
-      process.env.SHAREPOINT_SITE
+      process.env.SHAREPOINT_DIR_PATH
     )) {
       console.log('Missing environment variables, skipping tests.')
       this.skip()
