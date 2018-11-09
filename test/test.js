@@ -10,8 +10,11 @@ const expect = chai.expect
 const Sharepoint = require('./../lib')
 
 describe('Tests', function () {
+  this.timeout(15000)
+
   const FOLDER_NAME = 'TestFolder'
   const FILE_NAME = 'Test.txt'
+  const FILE_NAME_1 = 'Test.png'
 
   let sharepoint
 
@@ -92,10 +95,7 @@ describe('Tests', function () {
   })
 
   it('upload file read in from fixtures', async () => {
-    const filepath = path.resolve(__dirname, 'fixtures', FILE_NAME)
-    const base64 = fs.readFileSync(filepath, { encoding: 'base64' })
-    const encodedBase64String = base64.replace(/^data:+[a-z]+\/+[a-z]+;base64,/, '')
-    const binaryData = Buffer.from(encodedBase64String, 'base64')
+    const binaryData = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
 
     await sharepoint.createFile(
       `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
@@ -110,6 +110,22 @@ describe('Tests', function () {
     expect(contents[0].Name).to.eql(FILE_NAME)
   })
 
+  it('upload file of different format (png) from fixtures', async () => {
+    const binaryData = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
+
+    await sharepoint.createFile(
+      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      FILE_NAME_1,
+      binaryData
+    )
+  })
+
+  it('get contents of new folder, expect new file of different format (png) from fixtures', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    expect(contents.length).to.eql(2)
+    expect(contents.map(i => i.Name).includes(FILE_NAME_1)).to.eql(true)
+  })
+
   it('delete a folder', async () => {
     await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
   })
@@ -120,3 +136,9 @@ describe('Tests', function () {
     expect(contents.map(i => i.Name).includes(FOLDER_NAME)).to.eql(false)
   })
 })
+
+function getBinaryData (filepath) {
+  const base64 = fs.readFileSync(filepath, { encoding: 'base64' })
+  const encodedBase64String = base64.replace(/^data:+[a-z]+\/+[a-z]+;base64,/, '')
+  return Buffer.from(encodedBase64String, 'base64')
+}
