@@ -82,10 +82,7 @@ describe('Tests', function () {
   })
 
   it('delete the new file', async () => {
-    await sharepoint.deleteFile(
-      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
-      FILE_NAME
-    )
+    await sharepoint.deleteFile(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`, FILE_NAME)
   })
 
   it('get contents of new folder, new file should be deleted', async () => {

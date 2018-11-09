@@ -11,7 +11,7 @@ First, set these to match your SharePoint environment:
 | `SHAREPOINT_URL` | This is the site we're aiming for, so something like `https://example.sharepoint.com/sites/YourSite/` |
 | `SHAREPOINT_USERNAME` | The username you want to connect to SharePoint with. Note this is the full username with an `@`, so something like `some.username@example.com` |
 | `SHAREPOINT_PASSWORD` | And yup, the password to accompany `SHAREPOINT_USERNAME`. |
-| `SHAREPOINT_DIR_PATH` | Path to where the files are. |
+| `SHAREPOINT_DIR_PATH` | Path to where the files are. e.g. `/Shared Documents/General ` |
 
 * Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
