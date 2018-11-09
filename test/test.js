@@ -30,9 +30,33 @@ describe('Tests', function () {
     }
   })
 
+  it('attempt to create a new Sharepoint without passing url', () => {
+    let error
+
+    try {
+      const sp = new Sharepoint()
+    } catch (e) {
+      error = e.message
+    }
+
+    expect(error).to.eql('You must provide a url.')
+  })
+
   it('create a new Sharepoint', () => {
-    sharepoint = new Sharepoint({ url: process.env.SHAREPOINT_URL })
+    sharepoint = new Sharepoint(process.env.SHAREPOINT_URL)
     expect(sharepoint.url).to.eql(process.env.SHAREPOINT_URL)
+  })
+
+  it('attempt to authenticate without passing in username or password', async () => {
+    let error
+    
+    try {
+      await sharepoint.authenticate()
+    } catch (e) {
+      error = e.message
+    }
+
+    expect(error).to.eql('You must provide a username and password.')
   })
   
   it('authenticate', async () => {
@@ -56,8 +80,25 @@ describe('Tests', function () {
     expect(sharepoint.formDigestValue).to.not.eql(null)
   })
 
+  it('attempt to create a folder, without passing in a folder name', async () => {
+    let error
+
+    try {
+      await sharepoint.createFolder({
+        dirPath: process.env.SHAREPOINT_DIR_PATH
+      })
+    } catch (e) {
+      error = e.message
+    }
+    
+    expect(error).to.eql('You must provide a folder name.')
+  })
+
   it('create a folder', async () => {
-    await sharepoint.createFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
+    await sharepoint.createFolder({
+      dirPath: process.env.SHAREPOINT_DIR_PATH,
+      folderName: FOLDER_NAME
+    })
   })
 
   it('get directory contents, check new folder exists', async () => {
