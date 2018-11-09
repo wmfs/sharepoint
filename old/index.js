@@ -11,9 +11,6 @@ module.exports = async function () {
   const url = process.env.SHAREPOINT_URL
   console.log(`SharePoint URL: '${url}'`)
 
-  const rootSharePointDirPath = process.env.SHAREPOINT_DIR_PATH
-  console.log(`rootSharePointDirPath: '${rootSharePointDirPath}'`)
-
   // Grab credentials from env variables
   const credentials = {
     username: process.env.SHAREPOINT_USERNAME,
@@ -34,6 +31,10 @@ module.exports = async function () {
 
     const site = data.d
     const ServerRelativeUrl = site.ServerRelativeUrl
+
+    const rootSharePointDirPath = ServerRelativeUrl + process.env.SHAREPOINT_DIR_PATH
+    console.log(`rootSharePointDirPath: '${rootSharePointDirPath}'`)
+
     console.log('')
     console.log('Site details')
     console.log('------------')
@@ -51,13 +52,25 @@ module.exports = async function () {
     console.log('')
 
     // Create a new folder
-    // const createFolderResponse = await createAFolder('Hello', url, formDigestValue, headers)
+    // const createFolderResponse = await createAFolder('Hello', url, formDigestValue, headers, rootSharePointDirPath)
     // console.log(`Created folder './${createFolderResponse.Name}' at ${createFolderResponse.TimeCreated} (UniqueId=${createFolderResponse.UniqueId})`)
     // console.log('')
 
     // Get file contents
-    const contents = await getContents(url, headers)
+    const contents = await getContents(url, headers, rootSharePointDirPath)
     console.log('Contents:\n', contents.map(i => i.Name).join('\n'))
+
+    // Delete a folder
+    const deleteFolderResponse = await axios({
+      method: 'post',
+      url: `${url}/_api/web/GetFolderByServerRelativeUrl('${rootSharePointDirPath}/TestFolder')`,
+      headers: {
+        ...headers,
+        'X-RequestDigest': formDigestValue,
+        'X-HTTP-Method': 'DELETE'
+      }
+    })
+    console.log('>>>', deleteFolderResponse)
   } catch (e) {
     if (e.response) {
       console.log(`${e.response.status}: ${e.response.statusText}`)
@@ -79,10 +92,10 @@ const getFormDigestValue = async (url, headers) => {
   return contextInfo.data.d.GetContextWebInformation.FormDigestValue
 }
 
-const getContents = async (url, headers) => {
+const getContents = async (url, headers, rootSharePointDirPath) => {
   const get = type => {
     return axios.get(
-      `${url}/_api/web/GetFolderByServerRelativeUrl('${process.env.SHAREPOINT_DIR_PATH}')/${type}`,
+      `${url}/_api/web/GetFolderByServerRelativeUrl('${rootSharePointDirPath}')/${type}`,
       {headers, responseType: 'json'}
     )
   }
@@ -94,7 +107,7 @@ const getContents = async (url, headers) => {
 }
 
 // https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest
-const createAFolder = async (folderName, url, formDigestValue, headers) => {
+const createAFolder = async (folderName, url, formDigestValue, headers, rootSharePointDirPath) => {
   const result = await axios({
     method: 'post',
     url: `${url}/_api/web/folders`,
@@ -105,7 +118,7 @@ const createAFolder = async (folderName, url, formDigestValue, headers) => {
     },
     data: {
       __metadata: {type: 'SP.Folder' },
-      ServerRelativeUrl: `${process.env.SHAREPOINT_DIR_PATH}/${folderName}`
+      ServerRelativeUrl: `${rootSharePointDirPath}/${folderName}`
     },
     responseType: 'json'
   })

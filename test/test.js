@@ -61,5 +61,13 @@ describe('Tests', function () {
     expect(contents.map(i => i.Name).includes(NEW_FOLDER_NAME)).to.eql(true)
   })
 
-  // delete new folder
+  it('delete a folder', async () => {
+    await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, NEW_FOLDER_NAME)
+  })
+
+  it('get directory contents, check folder has been deleted', async () => {
+    const contents = await sharepoint.getContents(process.env.SHAREPOINT_DIR_PATH)
+    expect(contents).to.not.eql(null)
+    expect(contents.map(i => i.Name).includes(NEW_FOLDER_NAME)).to.eql(false)
+  })
 })
