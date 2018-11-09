@@ -8,7 +8,8 @@ const expect = chai.expect
 const Sharepoint = require('./../lib')
 
 describe('Tests', function () {
-  const NEW_FOLDER_NAME = 'TestFolder'
+  const FOLDER_NAME = 'TestFolder'
+  const FILE_NAME = 'Test.txt'
 
   let sharepoint
 
@@ -52,27 +53,41 @@ describe('Tests', function () {
   })
 
   it('create a folder', async () => {
-    await sharepoint.createFolder(process.env.SHAREPOINT_DIR_PATH, NEW_FOLDER_NAME)
+    await sharepoint.createFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
   })
 
   it('get directory contents, check new folder exists', async () => {
     const contents = await sharepoint.getContents(process.env.SHAREPOINT_DIR_PATH)
     expect(contents).to.not.eql(null)
-    expect(contents.map(i => i.Name).includes(NEW_FOLDER_NAME)).to.eql(true)
+    expect(contents.map(i => i.Name).includes(FOLDER_NAME)).to.eql(true)
   })
 
-  it('get contents of new folder, check empty', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${NEW_FOLDER_NAME}`)
+  it('get contents of new folder, should be empty', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents).to.eql([])
   })
 
+  it('create file in new folder', async () => {
+    await sharepoint.createFile(
+      `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      FILE_NAME,
+      'Testing 1 2 3...'
+    )
+  })
+
+  it('get contents of new folder, expect new file', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    expect(contents.length).to.eql(1)
+    expect(contents[0].Name).to.eql('Test.txt')
+  })
+
   it('delete a folder', async () => {
-    await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, NEW_FOLDER_NAME)
+    await sharepoint.deleteFolder(process.env.SHAREPOINT_DIR_PATH, FOLDER_NAME)
   })
 
   it('get directory contents, check folder has been deleted', async () => {
     const contents = await sharepoint.getContents(process.env.SHAREPOINT_DIR_PATH)
     expect(contents).to.not.eql(null)
-    expect(contents.map(i => i.Name).includes(NEW_FOLDER_NAME)).to.eql(false)
+    expect(contents.map(i => i.Name).includes(FOLDER_NAME)).to.eql(false)
   })
 })
