@@ -22,5 +22,11 @@ npm install
 npm start
 ```
 
+## <a name="test"></a>Test
+
+```
+npm run test
+```
+
 ## <a name="license"></a>License
 [MIT](https://github.com/wmfs/node-sharepoint-experiments/blob/master/LICENSE)

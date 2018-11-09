@@ -22,7 +22,7 @@ module.exports = async function () {
   console.log(`Username: ${credentials.username}`)
 
   try {
-    const {headers} = await spauth.getAuth(url, credentials)
+    const { headers } = await spauth.getAuth(url, credentials)
 
     console.log(`Got cookie? ${headers.hasOwnProperty('Cookie')}`)
     console.log(`Auth type: ${headers.Cookie.split('=')[0]}`)
@@ -30,7 +30,7 @@ module.exports = async function () {
     headers['Accept'] = 'application/json;odata=verbose'
 
     // Call the web endpoint
-    const {data} = await axios.get(`${url}/_api/web`, {headers, responseType: 'json'})
+    const { data } = await axios.get(`${url}/_api/web`, {headers, responseType: 'json'})
 
     const site = data.d
     const ServerRelativeUrl = site.ServerRelativeUrl
@@ -51,10 +51,9 @@ module.exports = async function () {
     console.log('')
 
     // Create a new folder
-    const createFolderResponse = await createAFolder('Hello', url, formDigestValue, headers)
-    console.log('')
-    console.log(`Created folder './${createFolderResponse.Name}' at ${createFolderResponse.TimeCreated} (UniqueId=${createFolderResponse.UniqueId})`)
-    console.log('')
+    // const createFolderResponse = await createAFolder('Hello', url, formDigestValue, headers)
+    // console.log(`Created folder './${createFolderResponse.Name}' at ${createFolderResponse.TimeCreated} (UniqueId=${createFolderResponse.UniqueId})`)
+    // console.log('')
 
     // Get file contents
     const contents = await getContents(url, headers)
