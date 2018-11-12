@@ -2,8 +2,22 @@
 
 Adventures in uploading/listing/downloading documents in Microsoft **SharePoint Online**... using Node.js
 
-## Environment Variables
+## <a name="gettingStarted"></a>Getting Started
 
+```
+const Sharepoint = require('@wmfs/node-sharepoint-experiments') // todo: npm publish/change package name!
+const sp = new Sharepoint('URL HERE')
+
+sp.authenticate()
+sp.getWebEndpoint()
+sp.getContents(dirPath)
+sp.createFolder(options) // options = { dirPath, folderName }
+sp.deleteFolder(options) // options = { dirPath, folderName }
+sp.createFile(options) // options = { dirPath, fileName, data }
+sp.deleteFile(options) // options = { dirPath, fileName }
+```
+
+## <a name="test"></a>Test
 First, set these to match your SharePoint environment:
 
 | Env Variable | Value |
@@ -15,15 +29,7 @@ First, set these to match your SharePoint environment:
 
 * Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
-## <a name="running"></a>Running
-
-```
-npm install
-npm start
-```
-
-## <a name="test"></a>Test
-
+Then, run:
 ```
 npm run test
 ```
