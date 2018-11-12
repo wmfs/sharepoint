@@ -5,7 +5,7 @@ Adventures in uploading/listing/downloading documents in Microsoft **SharePoint 
 ## <a name="gettingStarted"></a>Getting Started
 
 ```
-const Sharepoint = require('@wmfs/node-sharepoint-experiments') // todo: npm publish/change package name!
+const Sharepoint = require('@wmfs/sharepoint')
 const sp = new Sharepoint('URL HERE')
 
 sp.authenticate()
