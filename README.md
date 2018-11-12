@@ -1,4 +1,4 @@
-# node-sharepoint-experiments
+# sharepoint
 
 Adventures in uploading/listing/downloading documents in Microsoft **SharePoint Online**... using Node.js
 
@@ -35,4 +35,4 @@ npm run test
 ```
 
 ## <a name="license"></a>License
-[MIT](https://github.com/wmfs/node-sharepoint-experiments/blob/master/LICENSE)
+[MIT](https://github.com/wmfs/sharepoint/blob/master/LICENSE)
