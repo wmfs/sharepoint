@@ -47,6 +47,18 @@ describe('Tests', function () {
     expect(sharepoint.url).to.eql(process.env.SHAREPOINT_URL)
   })
 
+  it('attempt to get web end point without authenticatng', async () => {
+    let error
+
+    try {
+      await sharepoint.getWebEndpoint()
+    } catch (e) {
+      error = e.message
+    }
+
+    expect(error).to.eql('No headers, you must authenticate.')
+  })
+
   it('attempt to authenticate without passing in username or password', async () => {
     let error
     
@@ -92,6 +104,64 @@ describe('Tests', function () {
     }
     
     expect(error).to.eql('You must provide a folder name.')
+  })
+
+  it('attempt to delete a folder, without passing in a folder name', async () => {
+    let error
+
+    try {
+      await sharepoint.deleteFolder({
+        dirPath: process.env.SHAREPOINT_DIR_PATH
+      })
+    } catch (e) {
+      error = e.message
+    }
+    
+    expect(error).to.eql('You must provide a folder name.')
+  })
+
+  it('attempt to create a file, without passing in a file name', async () => {
+    let error
+
+    try {
+      await sharepoint.createFile({
+        dirPath: process.env.SHAREPOINT_DIR_PATH,
+        data: '...'
+      })
+    } catch (e) {
+      error = e.message
+    }
+    
+    expect(error).to.eql('You must provide a file name.')
+  })
+
+  it('attempt to create a file, without passing in data', async () => {
+    let error
+
+    try {
+      await sharepoint.createFile({
+        dirPath: process.env.SHAREPOINT_DIR_PATH,
+        fileName: 'new file'
+      })
+    } catch (e) {
+      error = e.message
+    }
+    
+    expect(error).to.eql('You must provide data.')
+  })
+
+  it('attempt to delete a file, without passing in a file name', async () => {
+    let error
+
+    try {
+      await sharepoint.deleteFile({
+        dirPath: process.env.SHAREPOINT_DIR_PATH
+      })
+    } catch (e) {
+      error = e.message
+    }
+    
+    expect(error).to.eql('You must provide a file name.')
   })
 
   it('create a folder', async () => {
