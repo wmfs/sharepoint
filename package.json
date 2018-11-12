@@ -1,19 +1,19 @@
 {
-  "name": "@wmfs/node-sharepoint-experiments",
+  "name": "@wmfs/sharepoint",
   "version": "0.0.0-semantically-released",
   "description": "Trying to upload/list/download documents in Microsoft SharePoint, using Node.js",
   "author": "West Midlands Fire Service",
-  "homepage": "https://github.com/wmfs/pg-info#readme",
+  "homepage": "https://github.com/wmfs/sharepoint#readme",
   "keywords": [
     "sharepoint"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wmfs/node-sharepoint-experiments.git"
+    "url": "https://github.com/wmfs/sharepoint.git"
   },
   "bugs": {
-    "url": "https://github.com/wmfs/node-sharepoint-experiments/issues"
+    "url": "https://github.com/wmfs/sharepoint/issues"
   },
   "main": "./lib/index.js",
   "dependencies": {
