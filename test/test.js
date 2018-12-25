@@ -240,6 +240,19 @@ describe('Tests', function () {
     expect(contents.map(i => i.Name).includes(FILE_NAME_1)).to.eql(true)
   })
 
+  it('upload file read in from fixtures using chunks', async () => {
+    const filePath = path.resolve(__dirname, 'fixtures', FILE_NAME_1);
+    const stats = fs.statSync(filePath)
+    const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 });
+    await sharepoint.createFileChunked({
+      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: FILE_NAME,
+      stream,
+      fileSize:stats.size,
+      chunkSize: 1024 * 2,
+    });
+  })
+
   it('delete a folder', async () => {
     await sharepoint.deleteFolder({
       dirPath: process.env.SHAREPOINT_DIR_PATH,
