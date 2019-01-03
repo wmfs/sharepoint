@@ -88,8 +88,8 @@ describe('Tests', function () {
   })
 
   it('get form digest value', async () => {
-    await sharepoint.getFormDigestValue()
-    expect(sharepoint.formDigestValue).to.not.eql(null)
+    const formDigestValue = await sharepoint.getFormDigestValue()
+    expect(formDigestValue).to.not.eql(null)
   })
 
   it('attempt to create a folder, without passing in a folder name', async () => {
