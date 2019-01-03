@@ -1,6 +1,11 @@
 # sharepoint
 
-Adventures in uploading/listing/downloading documents in Microsoft **SharePoint Online**... using Node.js
+[![Build Status](https://travis-ci.org/wmfs/sharepoint.svg?branch=master)](https://travis-ci.org/wmfs/sharepoint)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/wmfs/sharepoint/blob/master/README.md)
+
+> Adventures in uploading/listing/downloading documents in Microsoft **SharePoint Online**... using Node.js
 
 ## <a name="gettingStarted"></a>Getting Started
 
