@@ -73,8 +73,8 @@ describe('Tests', function () {
 
   it('authenticate', async () => {
     await sharepoint.authenticate(process.env.SHAREPOINT_USERNAME, process.env.SHAREPOINT_PASSWORD)
-    expect(sharepoint.headers.Cookie).to.not.eql(null)
-    expect(sharepoint.headers.Accept).to.not.eql(null)
+    expect(sharepoint.headers.Cookie.split('=')[0]).to.eql('FedAuth')
+    expect(sharepoint.headers.Accept).to.eql('application/json;odata=verbose')
   })
 
   it('call the web endpoint', async () => {
