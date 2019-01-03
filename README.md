@@ -15,6 +15,7 @@ sp.createFolder(options) // options = { dirPath, folderName }
 sp.deleteFolder(options) // options = { dirPath, folderName }
 sp.createFile(options) // options = { dirPath, fileName, data }
 sp.deleteFile(options) // options = { dirPath, fileName }
+sp.createFileChunked(options) // options = { dirPath, fileName, stream, fileSize, chunkSize }
 ```
 
 ## <a name="test"></a>Test

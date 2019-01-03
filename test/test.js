@@ -61,7 +61,7 @@ describe('Tests', function () {
 
   it('attempt to authenticate without passing in username or password', async () => {
     let error
-    
+
     try {
       await sharepoint.authenticate()
     } catch (e) {
@@ -70,7 +70,7 @@ describe('Tests', function () {
 
     expect(error).to.eql('You must provide a username and password.')
   })
-  
+
   it('authenticate', async () => {
     await sharepoint.authenticate(process.env.SHAREPOINT_USERNAME, process.env.SHAREPOINT_PASSWORD)
     expect(sharepoint.headers.Cookie).to.not.eql(null)
@@ -102,7 +102,7 @@ describe('Tests', function () {
     } catch (e) {
       error = e.message
     }
-    
+
     expect(error).to.eql('You must provide a folder name.')
   })
 
@@ -116,7 +116,7 @@ describe('Tests', function () {
     } catch (e) {
       error = e.message
     }
-    
+
     expect(error).to.eql('You must provide a folder name.')
   })
 
@@ -131,7 +131,7 @@ describe('Tests', function () {
     } catch (e) {
       error = e.message
     }
-    
+
     expect(error).to.eql('You must provide a file name.')
   })
 
@@ -146,7 +146,7 @@ describe('Tests', function () {
     } catch (e) {
       error = e.message
     }
-    
+
     expect(error).to.eql('You must provide data.')
   })
 
@@ -160,7 +160,7 @@ describe('Tests', function () {
     } catch (e) {
       error = e.message
     }
-    
+
     expect(error).to.eql('You must provide a file name.')
   })
 
@@ -215,7 +215,7 @@ describe('Tests', function () {
       dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME,
       data
-    })    
+    })
   })
 
   it('get contents of new folder, expect new file from fixtures', async () => {
@@ -241,16 +241,16 @@ describe('Tests', function () {
   })
 
   it('upload file read in from fixtures using chunks', async () => {
-    const filePath = path.resolve(__dirname, 'fixtures', FILE_NAME_1);
-    const stats = fs.statSync(filePath)
-    const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 });
+    const filePath = path.resolve(__dirname, 'fixtures', FILE_NAME_1)
+    const { size } = fs.statSync(filePath)
+    const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 })
     await sharepoint.createFileChunked({
       dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME,
+      fileName: FILE_NAME_1,
       stream,
-      fileSize:stats.size,
-      chunkSize: 1024 * 2,
-    });
+      fileSize: size,
+      chunkSize: 1024 * 2
+    })
   })
 
   it('delete a folder', async () => {
