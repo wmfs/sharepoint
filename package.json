@@ -37,7 +37,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "node ./node_modules/mocha/bin/_mocha",
+    "test": "nyc mocha && standard",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "semantic-release": "semantic-release"
   },
