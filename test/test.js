@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 'use strict'
 
-const dotEnv = require('dotenv').config()
+const dotEnv = require('dotenv').config() // eslint-disable-line
 const path = require('path')
 const fs = require('fs')
 const chai = require('chai')
@@ -34,7 +34,7 @@ describe('Tests', function () {
     let error
 
     try {
-      const sp = new Sharepoint()
+      const sp = new Sharepoint() // eslint-disable-line
     } catch (e) {
       error = e.message
     }
