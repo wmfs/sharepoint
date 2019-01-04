@@ -19,7 +19,7 @@ const sp = new Sharepoint('URL HERE')
 
 sp.authenticate()
 sp.getWebEndpoint()
-sp.getContents(patb)
+sp.getContents(path)
 sp.createFolder(path)
 sp.deleteFolder(path)
 sp.createFile(options) // options = { path, fileName, data }
