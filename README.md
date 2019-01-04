@@ -19,12 +19,12 @@ const sp = new Sharepoint('URL HERE')
 
 sp.authenticate()
 sp.getWebEndpoint()
-sp.getContents(dirPath)
-sp.createFolder(options) // options = { dirPath, folderName }
-sp.deleteFolder(options) // options = { dirPath, folderName }
-sp.createFile(options) // options = { dirPath, fileName, data }
-sp.deleteFile(options) // options = { dirPath, fileName }
-sp.createFileChunked(options) // options = { dirPath, fileName, stream, fileSize, chunkSize }
+sp.getContents(patb)
+sp.createFolder(path)
+sp.deleteFolder(path)
+sp.createFile(options) // options = { path, fileName, data }
+sp.deleteFile(options) // options = { path, fileName }
+sp.createFileChunked(options) // options = { path, fileName, stream, fileSize, chunkSize }
 ```
 
 ## <a name="test"></a>Test

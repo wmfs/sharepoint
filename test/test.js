@@ -121,7 +121,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.createFile({
-        dirPath: process.env.SHAREPOINT_DIR_PATH,
+        path: process.env.SHAREPOINT_DIR_PATH,
         data: '...'
       })
     } catch (e) {
@@ -136,7 +136,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.createFile({
-        dirPath: process.env.SHAREPOINT_DIR_PATH,
+        path: process.env.SHAREPOINT_DIR_PATH,
         fileName: 'new file'
       })
     } catch (e) {
@@ -151,7 +151,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.deleteFile({
-        dirPath: process.env.SHAREPOINT_DIR_PATH
+        path: process.env.SHAREPOINT_DIR_PATH
       })
     } catch (e) {
       error = e.message
@@ -177,7 +177,7 @@ describe('Tests', function () {
 
   it('create file in new folder', async () => {
     await sharepoint.createFile({
-      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME,
       data: 'Testing 1 2 3...'
     })
@@ -191,7 +191,7 @@ describe('Tests', function () {
 
   it('delete the new file', async () => {
     await sharepoint.deleteFile({
-      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME
     })
   })
@@ -205,7 +205,7 @@ describe('Tests', function () {
     const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
 
     await sharepoint.createFile({
-      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME,
       data
     })
@@ -221,7 +221,7 @@ describe('Tests', function () {
     const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
 
     await sharepoint.createFile({
-      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME_1,
       data
     })
@@ -238,7 +238,7 @@ describe('Tests', function () {
     const { size } = fs.statSync(filePath)
     const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 })
     await sharepoint.createFileChunked({
-      dirPath: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME_1,
       stream,
       fileSize: size,
