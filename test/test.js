@@ -92,32 +92,28 @@ describe('Tests', function () {
     expect(formDigestValue).to.not.eql(null)
   })
 
-  it('attempt to create a folder, without passing in a folder name', async () => {
+  it('attempt to create a folder, without passing in a path', async () => {
     let error
 
     try {
-      await sharepoint.createFolder({
-        dirPath: process.env.SHAREPOINT_DIR_PATH
-      })
+      await sharepoint.createFolder()
     } catch (e) {
       error = e.message
     }
 
-    expect(error).to.eql('You must provide a folder name.')
+    expect(error).to.eql('You must provide a path.')
   })
 
-  it('attempt to delete a folder, without passing in a folder name', async () => {
+  it('attempt to delete a folder, without passing in a path', async () => {
     let error
 
     try {
-      await sharepoint.deleteFolder({
-        dirPath: process.env.SHAREPOINT_DIR_PATH
-      })
+      await sharepoint.deleteFolder()
     } catch (e) {
       error = e.message
     }
 
-    expect(error).to.eql('You must provide a folder name.')
+    expect(error).to.eql('You must provide a path.')
   })
 
   it('attempt to create a file, without passing in a file name', async () => {
@@ -165,10 +161,7 @@ describe('Tests', function () {
   })
 
   it('create a folder', async () => {
-    await sharepoint.createFolder({
-      dirPath: process.env.SHAREPOINT_DIR_PATH,
-      folderName: FOLDER_NAME
-    })
+    await sharepoint.createFolder(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
   })
 
   it('get directory contents, check new folder exists', async () => {
@@ -254,10 +247,7 @@ describe('Tests', function () {
   })
 
   it('delete a folder', async () => {
-    await sharepoint.deleteFolder({
-      dirPath: process.env.SHAREPOINT_DIR_PATH,
-      folderName: FOLDER_NAME
-    })
+    await sharepoint.deleteFolder(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
   })
 
   it('get directory contents, check folder has been deleted', async () => {
