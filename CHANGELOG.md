@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/wmfs/sharepoint/compare/v1.0.0...v1.0.1) (2019-01-04)
+
+
+### 🐛 Bug Fixes
+
+* simplify way paths are passed in for creating folders etc ([4da514c](https://github.com/wmfs/sharepoint/commit/4da514c))
+
+
+### 📚 Documentation
+
+* remove coverage badge due to skipping tests ([52dc591](https://github.com/wmfs/sharepoint/commit/52dc591))
+
 # 1.0.0 (2019-01-03)
 
 
