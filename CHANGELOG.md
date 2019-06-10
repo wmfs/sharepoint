@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/wmfs/sharepoint/compare/v1.0.1...v1.1.0) (2019-06-10)
+
+
+### 🛠 Builds
+
+* **deps:** update axios requirement from 0.18.0 to 0.19.0 ([#8](https://github.com/wmfs/sharepoint/issues/8)) ([141e093](https://github.com/wmfs/sharepoint/commit/141e093))
+
+
+### 📚 Documentation
+
+* update README.md ([ed226c0](https://github.com/wmfs/sharepoint/commit/ed226c0))
+* update README.md (typo) ([8ac2f70](https://github.com/wmfs/sharepoint/commit/8ac2f70))
+
 ## [1.0.1](https://github.com/wmfs/sharepoint/compare/v1.0.0...v1.0.1) (2019-01-04)
 
 
