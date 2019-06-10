@@ -20,7 +20,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "node-sp-auth": "2.5.7",
-    "axios": "0.18.0"
+    "axios": "0.19.0"
   },
   "devDependencies": {
     "chai": "4.2.0",
