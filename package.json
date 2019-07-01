@@ -33,7 +33,7 @@
     "standard": "12.0.1",
     "semantic-release": "15.13.17",
     "@semantic-release/changelog": "3.0.1",
-    "@semantic-release/git": "7.0.13"
+    "@semantic-release/git": "7.0.15"
   },
   "scripts": {
     "lint": "standard",
