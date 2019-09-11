@@ -30,7 +30,7 @@
     "conventional-changelog-metahub": "2.0.2",
     "cz-conventional-changelog": "3.0.2",
     "nyc": "14.1.1",
-    "standard": "12.0.1",
+    "standard": "14.1.0",
     "semantic-release": "15.13.24",
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.16"
