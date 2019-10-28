@@ -31,7 +31,7 @@
     "cz-conventional-changelog": "3.0.2",
     "nyc": "14.1.1",
     "standard": "12.0.1",
-    "semantic-release": "15.13.24",
+    "semantic-release": "15.13.28",
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.16"
   },
