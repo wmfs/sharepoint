@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/wmfs/sharepoint/compare/v1.2.0...v1.3.0) (2020-01-23)
+
+
+### 🛠 Builds
+
+* **deps:** bump axios from 0.19.1 to 0.19.2 ([992b9fa](https://github.com/wmfs/sharepoint/commit/992b9fa8f918db0137728573fedcee840e3a589d))
+* **deps-dev:** bump conventional-changelog-metahub from 3.0.0 to 4.0.0 ([02b66c5](https://github.com/wmfs/sharepoint/commit/02b66c58d5008a88b6d2df7462bdee31fc55b047))
+
 # [1.2.0](https://github.com/wmfs/sharepoint/compare/v1.1.0...v1.2.0) (2020-01-08)
 
 
