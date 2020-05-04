@@ -28,7 +28,7 @@
     "dotenv": "^8.2.0",
     "codecov": "3.6.5",
     "conventional-changelog-metahub": "4.0.1",
-    "cz-conventional-changelog": "3.1.0",
+    "cz-conventional-changelog": "3.2.0",
     "nyc": "15.0.1",
     "standard": "14.3.3",
     "semantic-release": "17.0.7",
