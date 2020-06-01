@@ -1,3 +1,41 @@
+# [1.4.0](https://github.com/wmfs/sharepoint/compare/v1.3.0...v1.4.0) (2020-06-01)
+
+
+### 🛠 Builds
+
+* **deps:** bump node-sp-auth from 2.5.7 to 2.5.9 ([c425ace](https://github.com/wmfs/sharepoint/commit/c425acee6fd7e0baddbe725018941c91e310ea20))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.6 to 5.0.0 ([abfa249](https://github.com/wmfs/sharepoint/commit/abfa249c94d5f642fb42794cb63753490c8c6c1d))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 5.0.0 to 5.0.1 ([16a51cd](https://github.com/wmfs/sharepoint/commit/16a51cdcf412935ede88632b52093f155fc331c3))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.18 to 9.0.0 ([9e91abf](https://github.com/wmfs/sharepoint/commit/9e91abf6f5798bdf0fb705e70c2bead49743c25d))
+* **deps-dev:** bump codecov from 3.6.1 to 3.6.2 ([09f6563](https://github.com/wmfs/sharepoint/commit/09f65639b5ce788ffb7b0b04abc5e89a79678504))
+* **deps-dev:** bump codecov from 3.6.2 to 3.6.3 ([e5d1e72](https://github.com/wmfs/sharepoint/commit/e5d1e725182045abeda00b48d4a2bf247b3c8dcd))
+* **deps-dev:** bump codecov from 3.6.3 to 3.6.4 ([d45fbb9](https://github.com/wmfs/sharepoint/commit/d45fbb9ed3dc87c9e859b1fd7df88c0344ce2c4f))
+* **deps-dev:** bump codecov from 3.6.4 to 3.6.5 ([ca0d92c](https://github.com/wmfs/sharepoint/commit/ca0d92c064451376d5a290d0d7bf72ec22af750c))
+* **deps-dev:** bump codecov from 3.6.5 to 3.7.0 ([4400984](https://github.com/wmfs/sharepoint/commit/4400984a9a58b4a94691bb01322c3895f2023ce9))
+* **deps-dev:** bump conventional-changelog-metahub from 4.0.0 to 4.0.1 ([2d53a97](https://github.com/wmfs/sharepoint/commit/2d53a97203f614b33ada6fd3ef98642099eac7c8))
+* **deps-dev:** bump cz-conventional-changelog from 3.0.2 to 3.1.0 ([36c7cab](https://github.com/wmfs/sharepoint/commit/36c7cab9011a046d4c555157a3497cfdea516b0b))
+* **deps-dev:** bump cz-conventional-changelog from 3.1.0 to 3.2.0 ([384b207](https://github.com/wmfs/sharepoint/commit/384b207edd1bfbdb05c7cd855f4c412f88f51f98))
+* **deps-dev:** bump mocha from 7.0.0 to 7.0.1 ([cae62ec](https://github.com/wmfs/sharepoint/commit/cae62ec687be297453fbae7cbe8c4fc15d01dec5))
+* **deps-dev:** bump mocha from 7.0.1 to 7.1.0 ([7bc7e97](https://github.com/wmfs/sharepoint/commit/7bc7e97e6d15f7626e5f5a9df08b083626c8216e))
+* **deps-dev:** bump mocha from 7.1.0 to 7.1.1 ([e9a5787](https://github.com/wmfs/sharepoint/commit/e9a5787a2d1fd575c89c9a2e8b9268b04ddbe256))
+* **deps-dev:** bump mocha from 7.1.1 to 7.1.2 ([5b442f2](https://github.com/wmfs/sharepoint/commit/5b442f203fee98abda5879f94cc197782c240a75))
+* **deps-dev:** bump mocha from 7.1.2 to 7.2.0 ([f9b4bd3](https://github.com/wmfs/sharepoint/commit/f9b4bd3fc78e4c09736f10c261405bf1c585ea63))
+* **deps-dev:** bump nyc from 15.0.0 to 15.0.1 ([4745085](https://github.com/wmfs/sharepoint/commit/4745085bd88aef2aa1302bd84205dde763426920))
+* **deps-dev:** bump nyc from 15.0.1 to 15.1.0 ([76f30b0](https://github.com/wmfs/sharepoint/commit/76f30b09a00bdc5d681954e0384e7bf1f5cf173d))
+* **deps-dev:** bump semantic-release from 15.14.0 to 17.0.4 ([3289448](https://github.com/wmfs/sharepoint/commit/3289448df06d3bb6267391938797e55f3e1ea1f0))
+* **deps-dev:** bump semantic-release from 17.0.4 to 17.0.5 ([1e637eb](https://github.com/wmfs/sharepoint/commit/1e637eb3cff224ebbae611beeb9e575e42fd6360))
+* **deps-dev:** bump semantic-release from 17.0.5 to 17.0.6 ([469031f](https://github.com/wmfs/sharepoint/commit/469031ff6e2d768ee0833db1fa0661f1e9d20fc7))
+* **deps-dev:** bump semantic-release from 17.0.6 to 17.0.7 ([b0856a4](https://github.com/wmfs/sharepoint/commit/b0856a42b41037b246003f7c940855143b6a41f6))
+* **deps-dev:** bump semantic-release from 17.0.7 to 17.0.8 ([676db29](https://github.com/wmfs/sharepoint/commit/676db2931f314a5bc814fb8d38527868ce29a0a8))
+* **deps-dev:** bump standard from 14.3.1 to 14.3.2 ([56e43b0](https://github.com/wmfs/sharepoint/commit/56e43b07d0e78689732b80e4d42e6c22d1767ae0))
+* **deps-dev:** bump standard from 14.3.2 to 14.3.3 ([acbe123](https://github.com/wmfs/sharepoint/commit/acbe12343d375c98c1162ac6a727b4fbd9fa61eb))
+* **deps-dev:** bump standard from 14.3.3 to 14.3.4 ([b99016d](https://github.com/wmfs/sharepoint/commit/b99016dacb13e47cbd05e1b9bc3dc41199eb32cd))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add context env var config to config.yml ([7b96895](https://github.com/wmfs/sharepoint/commit/7b968958eba21f7b3edf162376da4cb9a22d1c76))
+
 # [1.3.0](https://github.com/wmfs/sharepoint/compare/v1.2.0...v1.3.0) (2020-01-23)
 
 
