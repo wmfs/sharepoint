@@ -1,3 +1,22 @@
+## [1.4.1](https://github.com/wmfs/sharepoint/compare/v1.4.0...v1.4.1) (2020-06-30)
+
+
+### 🐛 Bug Fixes
+
+* No-op README change to try and get semantic-release to run a release. ([03de8af](https://github.com/wmfs/sharepoint/commit/03de8af847c086b053177f25fc369b391ada853b))
+
+
+### 🛠 Builds
+
+* **deps-dev:** bump mocha from 7.2.0 to 8.0.1 ([ea9b10d](https://github.com/wmfs/sharepoint/commit/ea9b10da4c83b99eeddd4354ae57e8373f20474f))
+* **deps-dev:** bump semantic-release from 17.0.8 to 17.1.0 ([8ca1674](https://github.com/wmfs/sharepoint/commit/8ca16742b80f7b8cc9aa36e9e9ff55e5db5f6f81))
+* **deps-dev:** bump semantic-release from 17.1.0 to 17.1.1 ([58debd5](https://github.com/wmfs/sharepoint/commit/58debd5850175ef24375b09ce424cfa72792f78f))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** use updated circle node image [skip ci] ([9f36e7f](https://github.com/wmfs/sharepoint/commit/9f36e7f5e2e98e54ad4847877378164d6da2909f))
+
 # [1.4.0](https://github.com/wmfs/sharepoint/compare/v1.3.0...v1.4.0) (2020-06-01)
 
 
