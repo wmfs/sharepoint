@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/wmfs/sharepoint/compare/v1.4.1...v1.5.0) (2020-07-16)
+
+
+### 🛠 Builds
+
+* **deps:** bump node-sp-auth from 2.5.9 to 3.0.1 ([9f9b973](https://github.com/wmfs/sharepoint/commit/9f9b9731865392b36e7ad27d8f5374319408ea96))
+
 ## [1.4.1](https://github.com/wmfs/sharepoint/compare/v1.4.0...v1.4.1) (2020-06-30)
 
 
