@@ -1,3 +1,19 @@
+# [1.6.0](https://github.com/wmfs/sharepoint/compare/v1.5.0...v1.6.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** bump axios from 0.19.2 to 0.20.0 ([f4a60a8](https://github.com/wmfs/sharepoint/commit/f4a60a874a7276bb7c0caad6e6e029e80b92995e))
+* **deps-dev:** bump codecov from 3.7.0 to 3.7.1 ([e8701c9](https://github.com/wmfs/sharepoint/commit/e8701c91d04462b334132e8d4857464254050c2b))
+* **deps-dev:** bump codecov from 3.7.1 to 3.7.2 ([2d885a1](https://github.com/wmfs/sharepoint/commit/2d885a1d3623ae0e064be8ca942d96131aef09a1))
+* **deps-dev:** bump mocha from 8.0.1 to 8.1.0 ([c4ccb47](https://github.com/wmfs/sharepoint/commit/c4ccb474dddbd671d970adbfb660b00491ecf41c))
+* **deps-dev:** bump mocha from 8.1.0 to 8.1.1 ([5f49204](https://github.com/wmfs/sharepoint/commit/5f492045fdeb6f742ebe63771e7832f44d4027e5))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** separate lint job [ch1009] ([f69f339](https://github.com/wmfs/sharepoint/commit/f69f339a0c16c34f08f234a0b1de0f3f42d0ada4))
+
 # [1.5.0](https://github.com/wmfs/sharepoint/compare/v1.4.1...v1.5.0) (2020-07-16)
 
 
