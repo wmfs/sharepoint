@@ -1,3 +1,26 @@
+# [1.7.0](https://github.com/wmfs/sharepoint/compare/v1.6.0...v1.7.0) (2020-10-26)
+
+
+### 🛠 Builds
+
+* **deps:** bump axios from 0.20.0 to 0.21.0 ([c3b71ed](https://github.com/wmfs/sharepoint/commit/c3b71edf79ad295d2aa520dc211f7edf3cfb02a4))
+* **deps-dev:** bump codecov from 3.7.2 to 3.8.0 ([282a833](https://github.com/wmfs/sharepoint/commit/282a8334d68980a65075199fbb77d47fc83cd492))
+* **deps-dev:** bump cz-conventional-changelog from 3.2.0 to 3.2.1 ([88a2fca](https://github.com/wmfs/sharepoint/commit/88a2fca2b5f9ac867561c3e8a11bd60870a4a482))
+* **deps-dev:** bump cz-conventional-changelog from 3.2.1 to 3.3.0 ([3f124a6](https://github.com/wmfs/sharepoint/commit/3f124a64753b29df8e5cd43135b2b087e01d58b3))
+* **deps-dev:** bump mocha from 8.1.1 to 8.1.2 ([3282ad9](https://github.com/wmfs/sharepoint/commit/3282ad945fed5c9b29650d4446c80ab8c02c3e22))
+* **deps-dev:** bump mocha from 8.1.2 to 8.1.3 ([06e2a95](https://github.com/wmfs/sharepoint/commit/06e2a953df8fa7c57dec66da3f95f20c55e2a193))
+* **deps-dev:** bump mocha from 8.1.3 to 8.2.0 ([9580421](https://github.com/wmfs/sharepoint/commit/9580421ac8f6bc9936171850e77b9983d2fe07e8))
+* **deps-dev:** bump semantic-release from 17.1.1 to 17.1.2 ([cfe5b69](https://github.com/wmfs/sharepoint/commit/cfe5b69e1669f058a29e76205f9c5f939a4e0f5d))
+* **deps-dev:** bump semantic-release from 17.1.2 to 17.2.0 ([e0e24df](https://github.com/wmfs/sharepoint/commit/e0e24df3ef0fd968c41ccd08b4ea6238b814f891))
+* **deps-dev:** bump semantic-release from 17.2.0 to 17.2.1 ([a4ce34e](https://github.com/wmfs/sharepoint/commit/a4ce34e3c6bd737f4b952da1d84892d7282f79fc))
+* **deps-dev:** bump standard from 14.3.4 to 15.0.0 ([f295c1a](https://github.com/wmfs/sharepoint/commit/f295c1a426c43aa405500e3c00374f8b6136fc10))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** authenticate Docker image pull [ch2767] ([ac1c101](https://github.com/wmfs/sharepoint/commit/ac1c10130729af1e743ab209610bfeea12499c94))
+* **circle:** cache dependencies [ch2770] ([ed802d3](https://github.com/wmfs/sharepoint/commit/ed802d3bd7b88b720a408b457e30ec7d25e1f3e7))
+
 # [1.6.0](https://github.com/wmfs/sharepoint/compare/v1.5.0...v1.6.0) (2020-08-24)
 
 
