@@ -1,3 +1,28 @@
+# [1.8.0](https://github.com/wmfs/sharepoint/compare/v1.7.0...v1.8.0) (2021-01-05)
+
+
+### 🛠 Builds
+
+* **deps:** bump axios from 0.21.0 to 0.21.1 ([92620ec](https://github.com/wmfs/sharepoint/commit/92620ec1f49203da6db12a2118dc7b4beb2a61ef))
+* **deps-dev:** bump codecov from 3.8.0 to 3.8.1 ([0748d1d](https://github.com/wmfs/sharepoint/commit/0748d1d0f28d11a33b479b95835c59d7160a94e5))
+* **deps-dev:** bump mocha from 8.2.0 to 8.2.1 ([c775d70](https://github.com/wmfs/sharepoint/commit/c775d7085ee3bddb16d045dfa2f25d2019d42e46))
+* **deps-dev:** bump semantic-release from 17.2.1 to 17.2.2 ([ffdd4d0](https://github.com/wmfs/sharepoint/commit/ffdd4d0cadcb3db33e09ad5f405dee1d52918ed8))
+* **deps-dev:** bump semantic-release from 17.2.2 to 17.2.3 ([4794f51](https://github.com/wmfs/sharepoint/commit/4794f51c8efe1db4286cc7b2fb41bd8f5cda65a6))
+* **deps-dev:** bump semantic-release from 17.2.3 to 17.2.4 ([d884205](https://github.com/wmfs/sharepoint/commit/d88420595cab4a7cfdbfe262254e6d1dbba56b54))
+* **deps-dev:** bump semantic-release from 17.2.4 to 17.3.0 ([913b9e5](https://github.com/wmfs/sharepoint/commit/913b9e5b7146b611fb60d7430d16111f7ae79867))
+* **deps-dev:** bump semantic-release from 17.3.0 to 17.3.1 ([d933549](https://github.com/wmfs/sharepoint/commit/d933549309540910616de736a96ea8eebcf9f900))
+* **deps-dev:** bump standard from 15.0.0 to 15.0.1 ([e22da97](https://github.com/wmfs/sharepoint/commit/e22da97ed2440bf3e162b48aa27c409f3448e97e))
+* **deps-dev:** bump standard from 15.0.1 to 16.0.0 ([bfeb14c](https://github.com/wmfs/sharepoint/commit/bfeb14c6c531fc1b7e5300ca911416cb99413ee6))
+* **deps-dev:** bump standard from 16.0.0 to 16.0.1 ([5ed6438](https://github.com/wmfs/sharepoint/commit/5ed6438a303d02dd8bd9621223a7a9772f6bdbe2))
+* **deps-dev:** bump standard from 16.0.1 to 16.0.2 ([819f58c](https://github.com/wmfs/sharepoint/commit/819f58cfc1add1e3d43a6d78f965134331adcf3f))
+* **deps-dev:** bump standard from 16.0.2 to 16.0.3 ([d511259](https://github.com/wmfs/sharepoint/commit/d51125923d08af914507f92a5b340cd87e191f45))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** separate linting job [ch1009] ([35fd615](https://github.com/wmfs/sharepoint/commit/35fd615b0370475bff8b701efbbc6200c2d98ec7))
+* **circle:** update build environment variable context name [ch2771] ([9a82d6b](https://github.com/wmfs/sharepoint/commit/9a82d6b86fc34a5d59a252dd2b608569f66d65c8))
+
 # [1.7.0](https://github.com/wmfs/sharepoint/compare/v1.6.0...v1.7.0) (2020-10-26)
 
 
