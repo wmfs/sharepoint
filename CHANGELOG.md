@@ -1,3 +1,20 @@
+# [1.9.0](https://github.com/wmfs/sharepoint/compare/v1.8.0...v1.9.0) (2021-02-24)
+
+
+### 🛠 Builds
+
+* **deps:** bump node-sp-auth from 3.0.1 to 3.0.3 ([d9bc674](https://github.com/wmfs/sharepoint/commit/d9bc6743aa6b2842857eeaaec6c6698e7fb552dc))
+* **deps-dev:** bump chai from 4.2.0 to 4.3.0 ([cd2ea79](https://github.com/wmfs/sharepoint/commit/cd2ea795460bcf28576f974cda93eb6808fa62f0))
+* **deps-dev:** bump mocha from 8.2.1 to 8.3.0 ([97c1d44](https://github.com/wmfs/sharepoint/commit/97c1d446751ed9d8eb034b6233acb753f0f52ac8))
+* **deps-dev:** bump semantic-release from 17.3.1 to 17.3.2 ([ea61a07](https://github.com/wmfs/sharepoint/commit/ea61a072f82fb3eb47bb88b9842c7ec6e6d95aca))
+* **deps-dev:** bump semantic-release from 17.3.2 to 17.3.3 ([f027621](https://github.com/wmfs/sharepoint/commit/f027621911d66abdc4c194658d5a9515f1138638))
+* **deps-dev:** bump semantic-release from 17.3.3 to 17.3.4 ([1d2523b](https://github.com/wmfs/sharepoint/commit/1d2523bc2b19316e41557e1e9db0ea9dbdd41775))
+* **deps-dev:** bump semantic-release from 17.3.4 to 17.3.5 ([38386c3](https://github.com/wmfs/sharepoint/commit/38386c3833185c6adcb1d420936683079618399a))
+* **deps-dev:** bump semantic-release from 17.3.5 to 17.3.6 ([53d453b](https://github.com/wmfs/sharepoint/commit/53d453bc739d55acdd626062041a0c8341d6719a))
+* **deps-dev:** bump semantic-release from 17.3.6 to 17.3.7 ([c2677fd](https://github.com/wmfs/sharepoint/commit/c2677fd77fe496b6e6318efdce28a1aa8d87aad9))
+* **deps-dev:** bump semantic-release from 17.3.7 to 17.3.8 ([b7edbb6](https://github.com/wmfs/sharepoint/commit/b7edbb62c452eeeaa8f3e151ad265da31e4b29fa))
+* **deps-dev:** bump semantic-release from 17.3.8 to 17.3.9 ([29f993a](https://github.com/wmfs/sharepoint/commit/29f993abaf26f7be976b01b747360e77c6ff271a))
+
 # [1.8.0](https://github.com/wmfs/sharepoint/compare/v1.7.0...v1.8.0) (2021-01-05)
 
 
