@@ -1,3 +1,42 @@
+# [1.10.0](https://github.com/wmfs/sharepoint/compare/v1.9.0...v1.10.0) (2021-09-10)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency axios to v0.21.2 [security] ([7ac9cb4](https://github.com/wmfs/sharepoint/commit/7ac9cb42ca8e8457cb560fb1245535254cff7be6))
+* **deps-dev:** bump chai from 4.3.0 to 4.3.1 ([5bf3ebe](https://github.com/wmfs/sharepoint/commit/5bf3ebe965d8de9820709a074a105aeb7bc4f6d7))
+* **deps-dev:** bump chai from 4.3.1 to 4.3.2 ([d814c15](https://github.com/wmfs/sharepoint/commit/d814c158df4d435f1167e988a0de7164e85cc0cf))
+* **deps-dev:** bump chai from 4.3.2 to 4.3.3 ([c0ed7af](https://github.com/wmfs/sharepoint/commit/c0ed7af3d24acb3d87177cfd5b03cfaf2c32613f))
+* **deps-dev:** bump chai from 4.3.3 to 4.3.4 ([aed3966](https://github.com/wmfs/sharepoint/commit/aed3966f2b68467aec6db63a5fd140fe0a187476))
+* **deps-dev:** bump codecov from 3.8.1 to 3.8.2 ([018d824](https://github.com/wmfs/sharepoint/commit/018d8249b08a23b176ffaa351f224e30a9402a14))
+* **deps-dev:** bump codecov from 3.8.2 to 3.8.3 ([7053497](https://github.com/wmfs/sharepoint/commit/705349740e90b1806752b781619797a32801a4cf))
+* **deps-dev:** bump dotenv from 8.6.0 to 9.0.0 ([a905156](https://github.com/wmfs/sharepoint/commit/a905156c4dfa59cc7b313427915f9ea44c97a109))
+* **deps-dev:** bump dotenv from 9.0.2 to 10.0.0 ([684e561](https://github.com/wmfs/sharepoint/commit/684e5610ee29f52b4ccad9f222e2030704b4f158))
+* **deps-dev:** bump mocha from 8.3.0 to 8.3.1 ([ff3ac2b](https://github.com/wmfs/sharepoint/commit/ff3ac2b5fdce64250dc87205e1b6ca9e375f138f))
+* **deps-dev:** bump mocha from 8.3.1 to 8.3.2 ([1b99b49](https://github.com/wmfs/sharepoint/commit/1b99b4966cf551b8499d800417e76230a631af15))
+* **deps-dev:** bump mocha from 8.3.2 to 8.4.0 ([03a50d8](https://github.com/wmfs/sharepoint/commit/03a50d8eef45a19efaf1fe1ba335c8421a050011))
+* **deps-dev:** bump mocha from 8.4.0 to 9.0.0 ([bdac9a6](https://github.com/wmfs/sharepoint/commit/bdac9a692ddbc2951056d7a60ab1601969e3a8c6))
+* **deps-dev:** bump mocha from 9.0.0 to 9.0.1 ([b56e9b5](https://github.com/wmfs/sharepoint/commit/b56e9b5eb62440118b3ceb10539285d609759f23))
+* **deps-dev:** bump mocha from 9.0.1 to 9.0.2 ([e308144](https://github.com/wmfs/sharepoint/commit/e30814454214b749f2a037ce92cdc3baa7b5d689))
+* **deps-dev:** bump mocha from 9.0.2 to 9.0.3 ([f29711d](https://github.com/wmfs/sharepoint/commit/f29711d4d7a451132ca9a0abb559c19790fefd39))
+* **deps-dev:** bump semantic-release from 17.3.9 to 17.4.0 ([905922b](https://github.com/wmfs/sharepoint/commit/905922bf72c1670e2de83871b2557dac2b32e90f))
+* **deps-dev:** bump semantic-release from 17.4.0 to 17.4.1 ([0e328b4](https://github.com/wmfs/sharepoint/commit/0e328b4164aeb51c9a4391f7a84666f85191bc7e))
+* **deps-dev:** bump semantic-release from 17.4.1 to 17.4.2 ([b25e508](https://github.com/wmfs/sharepoint/commit/b25e508b1abcf1c5cbce4709daadc146370288a9))
+* **deps-dev:** bump semantic-release from 17.4.2 to 17.4.3 ([61fb5e3](https://github.com/wmfs/sharepoint/commit/61fb5e3ed1b338dadfc03cb6a2a1715dd8a14a62))
+* **deps-dev:** bump semantic-release from 17.4.3 to 17.4.4 ([163a2d7](https://github.com/wmfs/sharepoint/commit/163a2d7573b2ba8ae32a3bf47bb4ce5ec9f2ddc0))
+* **deps-dev:** pin dependency dotenv to 10.0.0 ([c65dfd9](https://github.com/wmfs/sharepoint/commit/c65dfd9422e0b97b787badbfdb5d207dcb7c49d5))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v9.0.1 ([3c746fb](https://github.com/wmfs/sharepoint/commit/3c746fb73930df8fbee906061958eeac79aa2526))
+* **deps-dev:** update dependency mocha to v9.1.0 ([8cb533e](https://github.com/wmfs/sharepoint/commit/8cb533ea36658fa732957ce7204de91fdee5f38e))
+* **deps-dev:** update dependency mocha to v9.1.1 ([718fc8f](https://github.com/wmfs/sharepoint/commit/718fc8ff121ad9bfbb1f2a15de202660f4119fc0))
+* **deps-dev:** update dependency semantic-release to v17.4.5 ([c3aa2dc](https://github.com/wmfs/sharepoint/commit/c3aa2dc429508b0cd0e5759c8960a6219cf22770))
+* **deps-dev:** update dependency semantic-release to v17.4.6 ([6421b8a](https://github.com/wmfs/sharepoint/commit/6421b8ae4c4df18434394d97c9749c59c380091f))
+* **deps-dev:** update dependency semantic-release to v17.4.7 ([a2ffb24](https://github.com/wmfs/sharepoint/commit/a2ffb2403d3b0d5aa0278743a50d7f837c184d39))
+
+
+### ♻️ Chores
+
+* add renovate config [ch6600] ([b8bfead](https://github.com/wmfs/sharepoint/commit/b8bfeadee077873128809c7b1c66f2c2f468589e))
+
 # [1.9.0](https://github.com/wmfs/sharepoint/compare/v1.8.0...v1.9.0) (2021-02-24)
 
 
