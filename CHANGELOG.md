@@ -1,3 +1,28 @@
+# [1.11.0](https://github.com/wmfs/sharepoint/compare/v1.10.0...v1.11.0) (2022-01-25)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6 ([8eae8de](https://github.com/wmfs/sharepoint/commit/8eae8de7992c05bb74f39a5cf344fce323f94d38))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v10 ([98835e5](https://github.com/wmfs/sharepoint/commit/98835e5751bdfd6436b4ecfe7b8d9f6de4ee5eb5))
+* **deps-dev:** update dependency dotenv to v11 ([2a53c9a](https://github.com/wmfs/sharepoint/commit/2a53c9ad410a69c56dc2c3c54d0984ae78b212e0))
+* **deps-dev:** update dependency dotenv to v12 ([f659ad8](https://github.com/wmfs/sharepoint/commit/f659ad834bbc079ca093f0c4bd019983cd61b1a1))
+* **deps-dev:** update dependency dotenv to v12.0.4 ([f561cba](https://github.com/wmfs/sharepoint/commit/f561cba770f7c41454ea706edbed6664ec4ddc24))
+* **deps-dev:** update dependency dotenv to v13 ([299f403](https://github.com/wmfs/sharepoint/commit/299f4037b08ac644642004eec5098421ae5bafaf))
+* **deps-dev:** update dependency dotenv to v14 ([1c6896e](https://github.com/wmfs/sharepoint/commit/1c6896e54b41b21726161d83df225c7cb60fac55))
+* **deps-dev:** update dependency dotenv to v14.2.0 ([96603a3](https://github.com/wmfs/sharepoint/commit/96603a3a27fbbf2e3616f21ee560ccade22ae236))
+* **deps-dev:** update dependency dotenv to v14.3.0 ([e409d41](https://github.com/wmfs/sharepoint/commit/e409d419472f19e88e7d694831b803a8fc7c3e16))
+* **deps-dev:** update dependency mocha to v9.1.2 ([cfb48e4](https://github.com/wmfs/sharepoint/commit/cfb48e40279e4e6dc36d2f31b7ba182bdb5edf9f))
+* **deps-dev:** update dependency mocha to v9.1.3 ([ec3b431](https://github.com/wmfs/sharepoint/commit/ec3b4317797531fafe4d601a84fbbeee5a7693a3))
+* **deps-dev:** update dependency mocha to v9.1.4 ([7afcdac](https://github.com/wmfs/sharepoint/commit/7afcdacb6b59731ceeef5225351fe4049c2c2740))
+* **deps-dev:** update dependency mocha to v9.2.0 ([d1fe594](https://github.com/wmfs/sharepoint/commit/d1fe5947735915efe2bf9c596ca10e6ae4800a70))
+* **deps-dev:** update dependency semantic-release to v18 ([8fac748](https://github.com/wmfs/sharepoint/commit/8fac748d8f677bb31105b78cd5bcc9d23bba63b6))
+* **deps-dev:** update dependency semantic-release to v18.0.1 ([8062b84](https://github.com/wmfs/sharepoint/commit/8062b84907a3576756a175f43b7485665b3ce2f7))
+* **deps-dev:** update dependency semantic-release to v19 ([09d3d24](https://github.com/wmfs/sharepoint/commit/09d3d242e52393c68894db2732abfd75f630e236))
+* **deps-dev:** update dependency standard to v16.0.4 ([45f00b5](https://github.com/wmfs/sharepoint/commit/45f00b516913974fb54ec9b86ad6b6427bdc7f3e))
+* **deps-dev:** update semantic-release monorepo ([0348a83](https://github.com/wmfs/sharepoint/commit/0348a83bd958ff15f99a58fa61b89a61043a3faa))
+* **deps:** update dependency node-sp-auth to v3.0.4 ([319b53d](https://github.com/wmfs/sharepoint/commit/319b53d7e2b7a99688e4f1075b50e9de0be1b4a0))
+
 # [1.10.0](https://github.com/wmfs/sharepoint/compare/v1.9.0...v1.10.0) (2021-09-10)
 
 
