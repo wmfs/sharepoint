@@ -1,3 +1,22 @@
+## [1.12.1](https://github.com/wmfs/sharepoint/compare/v1.12.0...v1.12.1) (2022-03-29)
+
+
+### 🐛 Bug Fixes
+
+* if the whole file was uploaded in the first chunk then commit (finish) the upload, otherwise it will never been resolved/committed. Also return info about the created file ([9310b28](https://github.com/wmfs/sharepoint/commit/9310b28fe97321e95b9b02814c78ec68b9d84998))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency chai to v4.3.5 ([5e1ae7c](https://github.com/wmfs/sharepoint/commit/5e1ae7c2ce74d39ea6e0186e2c3b67c9a1767b02))
+* **deps-dev:** update dependency chai to v4.3.6 ([609a75b](https://github.com/wmfs/sharepoint/commit/609a75be6d0aba130f350fb35b49a1176fa8e319))
+* **deps-dev:** update dependency dotenv to v14.3.2 ([e281620](https://github.com/wmfs/sharepoint/commit/e281620bb59d94d74947486a6eba3b6df18dc98a))
+* **deps-dev:** update dependency dotenv to v15 ([527e84b](https://github.com/wmfs/sharepoint/commit/527e84b2665836ad22a6635285a12f97587b47ac))
+* **deps-dev:** update dependency dotenv to v15.0.1 ([d58b9ab](https://github.com/wmfs/sharepoint/commit/d58b9ab74b7f8cdf88670c0fe7a45a047ff53953))
+* **deps-dev:** update dependency dotenv to v16 ([19d8fd9](https://github.com/wmfs/sharepoint/commit/19d8fd95c98cf8f5bb1dbab596bfb864d88ffdae))
+* **deps-dev:** update dependency mocha to v9.2.1 ([566a139](https://github.com/wmfs/sharepoint/commit/566a139f3e4a5159a741a30852e531edd1c39462))
+* **deps-dev:** update dependency mocha to v9.2.2 ([40c1372](https://github.com/wmfs/sharepoint/commit/40c13729387b0b8ef64adfeaf7e851ae6d0e9f19))
+
 # [1.12.0](https://github.com/wmfs/sharepoint/compare/v1.11.0...v1.12.0) (2022-01-25)
 
 
