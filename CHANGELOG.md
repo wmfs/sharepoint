@@ -1,3 +1,18 @@
+## [1.12.2](https://github.com/wmfs/sharepoint/compare/v1.12.1...v1.12.2) (2022-08-30)
+
+
+### 🐛 Bug Fixes
+
+* encode paths and filenames passed from options into axios url requests ([af1ff1c](https://github.com/wmfs/sharepoint/commit/af1ff1cc859c9b73f7b5e7325b731455df1d218e))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency dotenv to v16.0.1 ([2f40b38](https://github.com/wmfs/sharepoint/commit/2f40b38df345e555d986fef988cdea6cf1bc4387))
+* **deps-dev:** update dependency mocha to v10 ([0a09f62](https://github.com/wmfs/sharepoint/commit/0a09f6232dbae06b4a81713a24cbb07e76617759))
+* **deps-dev:** update dependency semantic-release to v19.0.3 ([b12cdbb](https://github.com/wmfs/sharepoint/commit/b12cdbbdc891030705014425029cd02452d7c3eb))
+* **deps-dev:** update dependency standard to v17 ([b181ecc](https://github.com/wmfs/sharepoint/commit/b181ecc76b402d2c3b61005a99d8f4c38376c1b8))
+
 ## [1.12.1](https://github.com/wmfs/sharepoint/compare/v1.12.0...v1.12.1) (2022-03-29)
 
 
