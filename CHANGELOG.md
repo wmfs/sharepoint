@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/wmfs/sharepoint/compare/v1.12.2...v1.13.0) (2022-11-02)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency node-sp-auth to v3.0.5 ([57d5c30](https://github.com/wmfs/sharepoint/commit/57d5c30fc00a2a63679f2449fb0e9b6a7d3344d8))
+
 ## [1.12.2](https://github.com/wmfs/sharepoint/compare/v1.12.1...v1.12.2) (2022-08-30)
 
 
