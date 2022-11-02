@@ -1,3 +1,12 @@
+# [1.16.0](https://github.com/wmfs/sharepoint/compare/v1.15.0...v1.16.0) (2022-11-02)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency mocha to v10.1.0 ([8d3eb03](https://github.com/wmfs/sharepoint/commit/8d3eb03f73675850bc28cd5a6bdbb0ed77b620f4))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([156557e](https://github.com/wmfs/sharepoint/commit/156557ec3d75c07e7a33518c612c075adaef7407))
+* **deps:** update dependency axios to v1 ([50ddae7](https://github.com/wmfs/sharepoint/commit/50ddae7e425ad1c3b8b26151cd351a3e00456d49))
+
 # [1.15.0](https://github.com/wmfs/sharepoint/compare/v1.14.0...v1.15.0) (2022-11-02)
 
 
