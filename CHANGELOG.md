@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/wmfs/sharepoint/compare/v1.14.0...v1.15.0) (2022-11-02)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency axios to v0.27.2 ([db5e251](https://github.com/wmfs/sharepoint/commit/db5e2514937f451f6e64817898e83581a49a80be))
+
 # [1.14.0](https://github.com/wmfs/sharepoint/compare/v1.13.0...v1.14.0) (2022-11-02)
 
 
