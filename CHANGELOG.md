@@ -1,3 +1,20 @@
+# [1.17.0](https://github.com/wmfs/sharepoint/compare/v1.16.0...v1.17.0) (2023-02-17)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([47b9330](https://github.com/wmfs/sharepoint/commit/47b9330dbc79921ab39a760cdf39ed6910b9d0a1))
+* **deps-dev:** update dependency chai to v4.3.7 ([b2e9805](https://github.com/wmfs/sharepoint/commit/b2e98058853f55f0a891aa47b8dde3cc3808244d))
+* **deps-dev:** update dependency dotenv to v16.0.3 ([bbbc34c](https://github.com/wmfs/sharepoint/commit/bbbc34caaa0b2b3168c82766880ac038ffb0337f))
+* **deps-dev:** update dependency mocha to v10.2.0 ([cd99169](https://github.com/wmfs/sharepoint/commit/cd99169295d121516969576a91d7412db3ab4560))
+* **deps-dev:** update dependency semantic-release to v20 ([7a5467c](https://github.com/wmfs/sharepoint/commit/7a5467c61752aeb9f350a2705e51a89dfcc8e05d))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([6b84351](https://github.com/wmfs/sharepoint/commit/6b8435139a5b0ad565ec1da824143b773af2c892))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([32451ae](https://github.com/wmfs/sharepoint/commit/32451aeea7af63db8be8787e630f3ef753b86642))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([d77b3ef](https://github.com/wmfs/sharepoint/commit/d77b3ef8430ed06fb0f78be8939d6671481ed307))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([623d2a3](https://github.com/wmfs/sharepoint/commit/623d2a35c7702cd1d614f75254536dca1ea31edc))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([87f386f](https://github.com/wmfs/sharepoint/commit/87f386fd4832b8bd37cba09701aa2d2df4099e06))
+* **deps:** update dependency axios to v1.3.3 ([b65b69d](https://github.com/wmfs/sharepoint/commit/b65b69d617cbcc3a1c5e3ab1d1d55e3a56026309))
+
 # [1.16.0](https://github.com/wmfs/sharepoint/compare/v1.15.0...v1.16.0) (2022-11-02)
 
 
