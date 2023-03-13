@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/wmfs/sharepoint/compare/v1.17.0...v1.18.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency semantic-release to v20.1.1 ([884755a](https://github.com/wmfs/sharepoint/commit/884755a3badc6e51915b5cf0b5d625b75d1b4ff5))
+* **deps:** update dependency axios to v1.3.4 ([6059e28](https://github.com/wmfs/sharepoint/commit/6059e282480949bd9d94c7c404d47d03db7e374d))
+
 # [1.17.0](https://github.com/wmfs/sharepoint/compare/v1.16.0...v1.17.0) (2023-02-17)
 
 
