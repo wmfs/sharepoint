@@ -1,3 +1,21 @@
+# [1.19.0](https://github.com/wmfs/sharepoint/compare/v1.18.0...v1.19.0) (2023-06-07)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.3 ([b63019c](https://github.com/wmfs/sharepoint/commit/b63019c826b92b16a2f9b6cbdbfd9458f7b9931d))
+* **deps-dev:** update dependency dotenv to v16.1.0 ([4dbc769](https://github.com/wmfs/sharepoint/commit/4dbc769c91d8948403691d01cf03a4d03a32c4ca))
+* **deps-dev:** update dependency dotenv to v16.1.1 ([5ddbcc8](https://github.com/wmfs/sharepoint/commit/5ddbcc8b4541f3f247e158882ea290a154f6af53))
+* **deps-dev:** update dependency dotenv to v16.1.3 ([7d000f3](https://github.com/wmfs/sharepoint/commit/7d000f3c074dcf1aead22df7985437c90a87abef))
+* **deps-dev:** update dependency dotenv to v16.1.4 ([ad45c63](https://github.com/wmfs/sharepoint/commit/ad45c63153f4b0191f07f94eec335628e8399f93))
+* **deps-dev:** update dependency semantic-release to v20.1.3 ([00f46fc](https://github.com/wmfs/sharepoint/commit/00f46fcadf7810cbd0ebed30cb5fc75cc53a368e))
+* **deps-dev:** update dependency semantic-release to v21 ([b989b05](https://github.com/wmfs/sharepoint/commit/b989b05918d240f4503fbb2f02ade4c76ca2b758))
+* **deps-dev:** update dependency semantic-release to v21.0.1 ([3db9e86](https://github.com/wmfs/sharepoint/commit/3db9e8639bf573cc0dd868bd306b914dfd4438d7))
+* **deps-dev:** update dependency semantic-release to v21.0.2 ([2d6cca5](https://github.com/wmfs/sharepoint/commit/2d6cca564e65a83435880b8e4e15e2d7a96c8485))
+* **deps-dev:** update dependency semantic-release to v21.0.3 ([0c0213e](https://github.com/wmfs/sharepoint/commit/0c0213e9723a8f912c595f8dd48db005d983af23))
+* **deps-dev:** update dependency standard to v17.1.0 ([c92c6c6](https://github.com/wmfs/sharepoint/commit/c92c6c68b4f30c4e3641d4986cc0ecba64b6fdb1))
+* **deps:** update dependency axios to v1.4.0 ([8796a5e](https://github.com/wmfs/sharepoint/commit/8796a5ef695e6b5d3ea281eeea020d3d2fd36c65))
+
 # [1.18.0](https://github.com/wmfs/sharepoint/compare/v1.17.0...v1.18.0) (2023-03-13)
 
 
