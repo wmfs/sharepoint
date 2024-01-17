@@ -19,7 +19,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "node-sp-auth": "3.0.7",
+    "node-sp-auth": "3.0.8",
     "axios": "1.6.0"
   },
   "devDependencies": {
