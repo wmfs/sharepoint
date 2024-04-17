@@ -52,7 +52,7 @@ Make a note of the fingerprint, but *get rid of the colons* - in your notes, the
 ### Register Application in Azure Portal
 
 1. Sign in to the Microsoft Entra admin centre as at least a 'Cloud Application Administrator'.
-   2.If you have access to multiple tenants, click Settings in the top menu to switch to the tenant in which you want to register the app from the Directories+subscriptions menu.
+2. If you have access to multiple tenants, click Settings in the top menu to switch to the tenant in which you want to register the app from the Directories+subscriptions menu.
 3. Browse to Identity > Applications > App registrations and select New registration.
 4. In Name, enter 'Test Application'
 5. For sign-in audience, select 'Accounts in this organizational directory only'
