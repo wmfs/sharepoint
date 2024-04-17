@@ -9,35 +9,134 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/wmfs/sharepoint/blob/master/README.md)
 
-> Adventures in uploading/listing/downloading documents in Microsoft **SharePoint Online**... using Node.js
+> A library that allows Node.js applications to interact with a Sharepoint Online site
 
 ## <a name="gettingStarted"></a>Getting Started
 
-```
-const Sharepoint = require('@wmfs/sharepoint')
-const sp = new Sharepoint('URL HERE')
+### Generating a Certificate/Key/Fingerprint
+You will first need to generate a self-signed certificate (and key) using openssl.  Enter the following command into a terminal window to generate a certificate valid for 365 days...
 
-sp.authenticate()
-sp.getWebEndpoint()
-sp.getContents(path)
-sp.createFolder(path)
-sp.deleteFolder(path)
-sp.createFile(options) // options = { path, fileName, data }
-sp.deleteFile(options) // options = { path, fileName }
-sp.createFileChunked(options) // options = { path, fileName, stream, fileSize, chunkSize }
+```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 ```
 
-## <a name="test"></a>Test
-First, set these to match your SharePoint environment:
+Note that (if your on Windows), if openssl hangs, press ctrl+c a couple of times to return to the command prompt and re-run the command, but pre-pend '<code>winpty</code>' and a space (so the command starts like <code>winpty openssl...</code>).
 
-| Env Variable | Value |
-| ------------ | ----- |
-| `SHAREPOINT_URL` | This is the site we're aiming for, so something like `https://example.sharepoint.com/sites/YourSite/` |
-| `SHAREPOINT_USERNAME` | The username you want to connect to SharePoint with. Note this is the full username with an `@`, so something like `some.username@example.com` |
-| `SHAREPOINT_PASSWORD` | And yup, the password to accompany `SHAREPOINT_USERNAME`. |
-| `SHAREPOINT_DIR_PATH` | Path to where the files are. e.g. `/Shared Documents/General ` |
+After executing the above command, you will be asked to enter the following information...
 
-* Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
+- A passphrase (twice).  Do make a note of this as you will need it later.
+- A 2 character country code ('UK')
+- A state/province name ('Greater London')
+- A locality name ('London')
+- An organisation name ('Home Office')
+- Common name ('.')
+- Email address ('.')
+
+After entering this information, openssl will generate two files - 'key.pem' (the private key) and 'cert.pem' (the certificate).
+
+We also need the 'fingerprint' of the certificate - you can get this by executing the following command...
+
+```
+openssl x509 -in cert.pem -noout -fingerprint
+```
+
+This command will output something like this...
+
+```
+SHA1 Fingerprint=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
+```
+
+Make a note of the fingerprint, but *get rid of the colons* - in your notes, the fingerprint should be exactly 40 character long.
+
+
+### Register Application in Azure Portal
+
+1. Sign in to the Microsoft Entra admin centre as at least a 'Cloud Application Administrator'.
+   2.If you have access to multiple tenants, click Settings in the top menu to switch to the tenant in which you want to register the app from the Directories+subscriptions menu.
+3. Browse to Identity > Applications > App registrations and select New registration.
+4. In Name, enter 'Test Application'
+5. For sign-in audience, select 'Accounts in this organizational directory only'
+6. Click the Register button
+7. Copy the 'Application (client) ID' and the 'Directory (tenant) ID' and make a note of them somewhere as you'll need them later.
+8. On the left, select 'Certificates & secrets'
+9. In the 'Certificates' section, select 'Upload certificate'
+10. Select the 'cert.pem' file you created earlier and click the Upload button
+11. In the description, enter 'Test Application Certificate'
+12. Click the Add button.
+13. On the left, select 'API Permissions'
+14. On the right, under Configured permissions, click the 'Add a permission' button
+15. Ensure that the Microsoft APIs tab is selected
+16. In the 'Commonly used Microsoft APIs' section, select 'Sharepoint'
+17. In the 'Application permissions' section, select the Sites.Selected in the list (use the search box if necessary)
+18. Click the 'Add permissions' button at the bottom
+19. Click the 'Grant admin consent' button (next to the 'Add a permission' button)
+20. In a Web Browser, open Graph Explorer (https://developer.microsoft.com/en-us/graph/graph-explorer) and log in as someone who has the necessary privileges to create/modify sharepoint access permissions.
+21. Execute the following GET request, replacing '<site-name>' with the name of your site, and leaving the body empty...
+
+```
+https://graph.microsoft.com/v1.0/sites?select=webUrl,Title,Id&$search="<site-name>"
+```
+
+You should see something like this - make a note of the value.id property (the 'site id') as you'll need it later...
+
+    {
+        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
+        "value": [
+            {
+                "id": "XXX.sharepoint.com,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+                "webUrl": "https://XXX.sharepoint.com/sites/SiteName",
+                "displayName": "SiteName"
+            }
+        ]
+    }
+
+22. We now need to make a POST request (though this time we need to put something in the body) to give the above application permissions to read and write to the site, via an URL like this (replacing '<site-id-from-above-GET-request>' with the 'site id' you made a note of above)...
+
+```
+https://graph.microsoft.com/v1.0/sites/<site-id-from-above-GET-request>/permissions
+```
+
+So for the above site for example, the URL would look like this...
+
+```
+https://graph.microsoft.com/v1.0/sites/XXX.sharepoint.com,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/permissions
+```
+
+...with this as the body, changing XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX to 'application (client) id', you made a note of earlier in step 7...
+
+    {
+        "roles": [
+            "manage"
+        ],
+        "grantedToIdentities": [
+            {
+                "application": {
+                    "id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+                    "displayName": "Test Application"
+                }
+            }
+        ]
+    }
+
+
+## <a name="test"></a>Tests
+Note that prior to running the tests, you will need to have created the certificate/key and registered the application in Azure Portal.
+
+Once you've done so, you will need to declare the following environment variables...
+
+| Name                               | Value                                                                                                                                                                                                             |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `DEBUG`                            | <code>Y</code> or <code>YES</code> or <code>TRUE</code> if you want information helpful for debugging logged to the console                                                                                       |
+| `SHAREPOINT_AUTH_SCOPE`            | `https://XXX.sharepoint.com/.default`, replacing <code>XXX</code> with your tenant name                                                                                                                           |
+| `SHAREPOINT_CLIENT_ID`             | The 'application (client) id' produced by Azure Portal when the application is registered                                                                                                                         |
+| `SHAREPOINT_CERT_PRIVATE_KEY_FILE` | The path and filename of the certificate private key file (the 'key.pem' file)                                                                                                                                    |
+| `SHAREPOINT_CERT_PASSPHRASE`       | The certificate passphrase                                                                                                                                                                                        |
+| `SHAREPOINT_CERT_FINGERPRINT`      | The 40 character (no colons!) hexadecimal fingerprint of the certificate                                                                                                                                          |
+| `SHAREPOINT_DIR_PATH`              | The base path under which this library interacts with files/folders. e.g. `/Shared Documents/General/test`                                                                                                        |
+| `SHAREPOINT_TENANT_ID`             | The 'directory (tenant) id' produced by Azure Portal when the application is registered                                                                                                                           |
+| `SHAREPOINT_URL`                   | This url of the site this library will interact with - something like `https://XXX.sharepoint.com/sites/SiteName`, replacing <code>XXX</code> with your tenant name and <code>SiteName</code> with your site name |
+
+Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
 Then, run:
 ```
@@ -46,5 +145,3 @@ npm run test
 
 ## <a name="license"></a>License
 [MIT](https://github.com/wmfs/sharepoint/blob/master/LICENSE)
-
-

@@ -1,13 +1,12 @@
 /* eslint-env mocha */
 'use strict'
 
-const dotEnv = require('dotenv').config() // eslint-disable-line
-const path = require('path')
-const fs = require('fs')
 const chai = require('chai')
 const expect = chai.expect
-
 const Sharepoint = require('./../lib')
+const process = require('node:process')
+const path = require('node:path')
+const fs = require('node:fs')
 
 describe('Tests', function () {
   this.timeout(15000)
@@ -20,71 +19,34 @@ describe('Tests', function () {
 
   before(function () {
     if (!(
-      process.env.SHAREPOINT_URL &&
-      process.env.SHAREPOINT_USERNAME &&
-      process.env.SHAREPOINT_PASSWORD &&
-      process.env.SHAREPOINT_DIR_PATH
+      process.env.SHAREPOINT_AUTH_SCOPE &&
+      process.env.SHAREPOINT_CERT_PRIVATE_KEY_FILE &&
+      process.env.SHAREPOINT_CERT_FINGERPRINT &&
+      process.env.SHAREPOINT_CERT_PASSPHRASE &&
+      process.env.SHAREPOINT_CLIENT_ID &&
+      process.env.SHAREPOINT_TENANT_ID &&
+      process.env.SHAREPOINT_DIR_PATH &&
+      process.env.SHAREPOINT_URL
     )) {
       console.log('Missing environment variables, skipping tests.')
       this.skip()
     }
   })
 
-  it('attempt to create a new Sharepoint without passing url', () => {
-    let error
-
-    try {
-      const sp = new Sharepoint() // eslint-disable-line
-    } catch (e) {
-      error = e.message
-    }
-
-    expect(error).to.eql('You must provide a url.')
-  })
-
-  it('create a new Sharepoint', () => {
+  it('construct Sharepoint instance', () => {
     sharepoint = new Sharepoint(process.env.SHAREPOINT_URL)
-    expect(sharepoint.url).to.eql(process.env.SHAREPOINT_URL)
-  })
-
-  it('attempt to get web end point without authenticatng', async () => {
-    let error
-
-    try {
-      await sharepoint.getWebEndpoint()
-    } catch (e) {
-      error = e.message
-    }
-
-    expect(error).to.eql('No headers, you must authenticate.')
-  })
-
-  it('attempt to authenticate without passing in username or password', async () => {
-    let error
-
-    try {
-      await sharepoint.authenticate()
-    } catch (e) {
-      error = e.message
-    }
-
-    expect(error).to.eql('You must provide a username and password.')
+    expect(sharepoint.siteUrl).to.eql(process.env.SHAREPOINT_URL)
   })
 
   it('authenticate', async () => {
-    await sharepoint.authenticate(process.env.SHAREPOINT_USERNAME, process.env.SHAREPOINT_PASSWORD)
-    expect(sharepoint.headers.Cookie.split('=')[0]).to.eql('FedAuth')
-    expect(sharepoint.headers.Accept).to.eql('application/json;odata=verbose')
+    await sharepoint.authenticate()
+    expect(sharepoint.accessToken).to.not.eql(null)
   })
 
   it('call the web endpoint', async () => {
     await sharepoint.getWebEndpoint()
-    expect(sharepoint.site).to.not.eql(null)
-    expect(sharepoint.site.id).to.not.eql(null)
-    expect(sharepoint.site.description).to.not.eql(null)
-    expect(sharepoint.site.created).to.not.eql(null)
-    expect(sharepoint.site.serverRelativeUrl).to.not.eql(null)
-    expect(sharepoint.site.lastModified).to.not.eql(null)
+    expect(sharepoint.baseUrl).to.not.eql(null)
+    expect(sharepoint.encodedBaseUrl).to.not.eql(null)
   })
 
   it('get form digest value', async () => {

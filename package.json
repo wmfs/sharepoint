@@ -1,7 +1,7 @@
 {
   "name": "@wmfs/sharepoint",
   "version": "0.0.0-semantically-released",
-  "description": "Trying to upload/list/download documents in Microsoft SharePoint, using Node.js",
+  "description": "A library that allows Node.js applications to interact with a Sharepoint Online site",
   "author": "West Midlands Fire Service",
   "homepage": "https://github.com/wmfs/sharepoint#readme",
   "keywords": [
@@ -19,8 +19,9 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "node-sp-auth": "3.0.7",
-    "axios": "1.6.0"
+    "@azure/msal-node": "2.6.6",
+    "axios": "1.6.0",
+    "uuid": "9.0.1"
   },
   "devDependencies": {
     "chai": "4.4.1",
