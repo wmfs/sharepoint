@@ -11,6 +11,15 @@
 
 > A library that allows Node.js applications to interact with a Sharepoint Online site
 
+## General Information
+Microsoft supports several authorisation grants and associated token flows.  This library makes use of a 'Client credentials' authentication flow, which permits a 'confidential client' to use its own credentials instead of impersonating a user.
+
+For more information, see https://learn.microsoft.com/en-gb/entra/identity-platform/msal-authentication-flows#client-credentials
+
+Interaction with Sharepoint Online is via the Sharepoint REST API.  For more information, see https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom and https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-rest-reference/dn450841(v=office.15)
+
+Note that this library makes use of a certificate as a credential, which is required by the Sharepoint REST API.  For future reference, be aware that attempting to use a shared secret instead will result in the Sharepoint REST API refusing access with a HTTP 401 (Unauthorised) error.
+
 ## <a name="gettingStarted"></a>Getting Started
 
 ### Generating a Certificate/Key/Fingerprint
