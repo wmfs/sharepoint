@@ -20,7 +20,7 @@ You will first need to generate a self-signed certificate (and key) using openss
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 ```
 
-Note that (if your on Windows), if openssl hangs, press ctrl+c a couple of times to return to the command prompt and re-run the command, but pre-pend '<code>winpty</code>' and a space (so the command starts like <code>winpty openssl...</code>).
+Note that (if your on Windows), if openssl hangs at any point, press ctrl+c a couple of times to return to the command prompt and re-run the command, but pre-pend '<code>winpty</code>' and a space (so the command starts like <code>winpty openssl...</code>).
 
 After executing the above command, you will be asked to enter the following information...
 
@@ -42,9 +42,7 @@ openssl x509 -in cert.pem -noout -fingerprint
 
 This command will output something like this...
 
-```
-SHA1 Fingerprint=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
-```
+> SHA1 Fingerprint=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
 
 Make a note of the fingerprint, but *get rid of the colons* - in your notes, the fingerprint should be exactly 40 character long.
 
@@ -98,11 +96,9 @@ https://graph.microsoft.com/v1.0/sites/<site-id-from-above-GET-request>/permissi
 
 So for the above site for example, the URL would look like this...
 
-```
-https://graph.microsoft.com/v1.0/sites/XXX.sharepoint.com,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/permissions
-```
+> https://graph.microsoft.com/v1.0/sites/XXX.sharepoint.com,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/permissions
 
-...with this as the body, changing XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX to 'application (client) id', you made a note of earlier in step 7...
+...with this as the body, changing XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX to the 'application (client) id' you made a note of earlier in step 7...
 
     {
         "roles": [
