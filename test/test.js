@@ -20,13 +20,13 @@ describe('Tests', function () {
   before(function () {
     if (!(
       process.env.SHAREPOINT_AUTH_SCOPE &&
-      process.env.SHAREPOINT_CERT_PRIVATE_KEY_FILE &&
       process.env.SHAREPOINT_CERT_FINGERPRINT &&
       process.env.SHAREPOINT_CERT_PASSPHRASE &&
+      process.env.SHAREPOINT_CERT_PRIVATE_KEY_FILE &&
       process.env.SHAREPOINT_CLIENT_ID &&
       process.env.SHAREPOINT_TENANT_ID &&
-      process.env.SHAREPOINT_DIR_PATH &&
-      process.env.SHAREPOINT_URL
+      process.env.SHAREPOINT_URL &&
+      process.env.SHAREPOINT_TESTS_DIR_PATH
     )) {
       console.log('Missing environment variables, skipping tests.')
       this.skip()
@@ -83,7 +83,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.createFile({
-        path: process.env.SHAREPOINT_DIR_PATH,
+        path: process.env.SHAREPOINT_TESTS_DIR_PATH,
         data: '...'
       })
     } catch (e) {
@@ -98,7 +98,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.createFile({
-        path: process.env.SHAREPOINT_DIR_PATH,
+        path: process.env.SHAREPOINT_TESTS_DIR_PATH,
         fileName: 'new file'
       })
     } catch (e) {
@@ -113,7 +113,7 @@ describe('Tests', function () {
 
     try {
       await sharepoint.deleteFile({
-        path: process.env.SHAREPOINT_DIR_PATH
+        path: process.env.SHAREPOINT_TESTS_DIR_PATH
       })
     } catch (e) {
       error = e.message
@@ -123,43 +123,43 @@ describe('Tests', function () {
   })
 
   it('create a folder', async () => {
-    await sharepoint.createFolder(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    await sharepoint.createFolder(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
   })
 
   it('get directory contents, check new folder exists', async () => {
-    const contents = await sharepoint.getContents(process.env.SHAREPOINT_DIR_PATH)
+    const contents = await sharepoint.getContents(process.env.SHAREPOINT_TESTS_DIR_PATH)
     expect(contents).to.not.eql(null)
     expect(contents.map(i => i.Name).includes(FOLDER_NAME)).to.eql(true)
   })
 
   it('get contents of new folder, should be empty', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents).to.eql([])
   })
 
   it('create file in new folder', async () => {
     await sharepoint.createFile({
-      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME,
       data: 'Testing 1 2 3...'
     })
   })
 
   it('get contents of new folder, expect new file', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents.length).to.eql(1)
     expect(contents[0].Name).to.eql(FILE_NAME)
   })
 
   it('delete the new file', async () => {
     await sharepoint.deleteFile({
-      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME
     })
   })
 
   it('get contents of new folder, new file should be deleted', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents).to.eql([])
   })
 
@@ -167,14 +167,14 @@ describe('Tests', function () {
     const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
 
     await sharepoint.createFile({
-      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME,
       data
     })
   })
 
   it('get contents of new folder, expect new file from fixtures', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents.length).to.eql(1)
     expect(contents[0].Name).to.eql(FILE_NAME)
   })
@@ -183,14 +183,14 @@ describe('Tests', function () {
     const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
 
     await sharepoint.createFile({
-      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME_1,
       data
     })
   })
 
   it('get contents of new folder, expect new file of different format (png) from fixtures', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents.length).to.eql(2)
     expect(contents.map(i => i.Name).includes(FILE_NAME_1)).to.eql(true)
   })
@@ -200,7 +200,7 @@ describe('Tests', function () {
     const { size } = fs.statSync(filePath)
     const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 })
     await sharepoint.createFileChunked({
-      path: `${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`,
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
       fileName: FILE_NAME_1,
       stream,
       fileSize: size,
@@ -209,11 +209,11 @@ describe('Tests', function () {
   })
 
   it('delete a folder', async () => {
-    await sharepoint.deleteFolder(`${process.env.SHAREPOINT_DIR_PATH}/${FOLDER_NAME}`)
+    await sharepoint.deleteFolder(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
   })
 
   it('get directory contents, check folder has been deleted', async () => {
-    const contents = await sharepoint.getContents(process.env.SHAREPOINT_DIR_PATH)
+    const contents = await sharepoint.getContents(process.env.SHAREPOINT_TESTS_DIR_PATH)
     expect(contents).to.not.eql(null)
     expect(contents.map(i => i.Name).includes(FOLDER_NAME)).to.eql(false)
   })

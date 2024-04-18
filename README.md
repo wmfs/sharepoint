@@ -124,24 +124,32 @@ So for the above site for example, the URL would look like this...
     }
 
 
-## <a name="test"></a>Tests
-Note that prior to running the tests, you will need to have created the certificate/key and registered the application in Azure Portal.
-
-Once you've done so, you will need to declare the following environment variables...
+## <a name="usage"></a>Usage
+To use the library, you will need to generate the certificate and key, determine the certificate fingerprint, register your application in Azure Portal and then set up the following environment variables...
 
 | Name                               | Value                                                                                                                                                                                                             |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `DEBUG`                            | <code>Y</code> or <code>YES</code> or <code>TRUE</code> if you want information helpful for debugging logged to the console                                                                                       |
 | `SHAREPOINT_AUTH_SCOPE`            | `https://XXX.sharepoint.com/.default`, replacing <code>XXX</code> with your tenant name                                                                                                                           |
 | `SHAREPOINT_CLIENT_ID`             | The 'application (client) id' produced by Azure Portal when the application is registered                                                                                                                         |
 | `SHAREPOINT_CERT_PRIVATE_KEY_FILE` | The path and filename of the certificate private key file (the 'key.pem' file)                                                                                                                                    |
 | `SHAREPOINT_CERT_PASSPHRASE`       | The certificate passphrase                                                                                                                                                                                        |
 | `SHAREPOINT_CERT_FINGERPRINT`      | The 40 character (no colons!) hexadecimal fingerprint of the certificate                                                                                                                                          |
-| `SHAREPOINT_DIR_PATH`              | The base path under which this library interacts with files/folders. e.g. `/Shared Documents/General/test`                                                                                                        |
+| `SHAREPOINT_DEBUG`                 | <code>Y</code> or <code>YES</code> or <code>TRUE</code> if you want information helpful for debugging logged to the console (optional)                                                                            |
 | `SHAREPOINT_TENANT_ID`             | The 'directory (tenant) id' produced by Azure Portal when the application is registered                                                                                                                           |
 | `SHAREPOINT_URL`                   | This url of the site this library will interact with - something like `https://XXX.sharepoint.com/sites/SiteName`, replacing <code>XXX</code> with your tenant name and <code>SiteName</code> with your site name |
 
 Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
+
+
+## <a name="test"></a>Tests
+Note that prior to running the tests, you will need to generate the certificate and key, determine the certificate fingerprint, register your application in Azure Portal and then setup the above environment variables.  You will also need to set up the following additional environment variables... 
+
+
+| Name                               | Value                                                                                                                                     |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `SHAREPOINT_TESTS_DIR_PATH`        | The location in your site under which the tests will work with when creating/deleting files/folders e.g. `/Shared Documents/General/test` |
+
+Again, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
 Then, run:
 ```
