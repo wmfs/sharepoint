@@ -136,19 +136,33 @@ To use the library, you will need to generate the certificate and key, determine
 | `SHAREPOINT_CERT_FINGERPRINT`      | The 40 character (no colons!) hexadecimal fingerprint of the certificate                                                                                                                                          |
 | `SHAREPOINT_DEBUG`                 | <code>Y</code> or <code>YES</code> or <code>TRUE</code> if you want information helpful for debugging logged to the console (optional)                                                                            |
 | `SHAREPOINT_TENANT_ID`             | The 'directory (tenant) id' produced by Azure Portal when the application is registered                                                                                                                           |
-| `SHAREPOINT_URL`                   | This url of the site this library will interact with - something like `https://XXX.sharepoint.com/sites/SiteName`, replacing <code>XXX</code> with your tenant name and <code>SiteName</code> with your site name |
 
 Alternatively, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
+Here are the functions the Sharepoint class makes available...
+
+```javascript
+const Sharepoint = require('@wmfs/sharepoint')
+const sp = new Sharepoint('URL HERE')
+
+sp.authenticate()
+sp.getWebEndpoint()
+sp.getContents(path)
+sp.createFolder(path)
+sp.deleteFolder(path)
+sp.createFile(options) // options = { path, fileName, data }
+sp.deleteFile(options) // options = { path, fileName }
+sp.createFileChunked(options) // options = { path, fileName, stream, fileSize, chunkSize }
+```
 
 ## <a name="test"></a>Tests
 Note that prior to running the tests, you will need to generate the certificate and key, determine the certificate fingerprint, register your application in Azure Portal and then setup the above environment variables.  You will also need to set up the following additional environment variables... 
 
 
-| Name                               | Value                                                                                                                                     |
-|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `SHAREPOINT_TESTS_DIR_PATH`        | The location in your site under which the tests will work with when creating/deleting files/folders e.g. `/Shared Documents/General/test` |
-
+| Name                               | Value                                                                                                                                                                                                                 |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `SHAREPOINT_TESTS_DIR_PATH`        | The location in your site under which the tests will work with when creating/deleting files/folders e.g. `/Shared Documents/General/test`                                                                             |
+| `SHAREPOINT_URL`                   | This url of the site that the tests will interact with - something like `https://XXX.sharepoint.com/sites/SiteName`, replacing <code>XXX</code> with your tenant name and <code>SiteName</code> with your site name   |
 Again, you can edit a `/.env` file if you prefer (as per [dotenv](https://www.npmjs.com/package/dotenv))
 
 Then, run:
