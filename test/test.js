@@ -12,8 +12,8 @@ describe('Tests', function () {
   this.timeout(15000)
 
   const FOLDER_NAME = 'TestFolder'
-  const FILE_NAME = 'Test.txt'
-  const FILE_NAME_1 = 'Test.png'
+  const TEXT_FILE_FILENAME = 'Test.txt'
+  const BINARY_FILE_FILENAME = 'Test.png'
 
   let sharepoint
 
@@ -148,7 +148,7 @@ describe('Tests', function () {
   it('create file in new folder', async () => {
     await sharepoint.createFile({
       path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME,
+      fileName: TEXT_FILE_FILENAME,
       data: 'Testing 1 2 3...'
     })
   })
@@ -156,13 +156,13 @@ describe('Tests', function () {
   it('get contents of new folder, expect new file', async () => {
     const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
     expect(contents.length).to.eql(1)
-    expect(contents[0].Name).to.eql(FILE_NAME)
+    expect(contents[0].Name).to.eql(TEXT_FILE_FILENAME)
   })
 
   it('delete the new file', async () => {
     await sharepoint.deleteFile({
       path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME
+      fileName: TEXT_FILE_FILENAME
     })
   })
 
@@ -171,45 +171,78 @@ describe('Tests', function () {
     expect(contents).to.eql([])
   })
 
-  it('upload file read in from fixtures', async () => {
-    const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME))
+  it('upload text file with filename 1', async () => {
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', TEXT_FILE_FILENAME))
 
     await sharepoint.createFile({
       path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME,
+      fileName: 'test-file-0.txt',
       data
     })
   })
 
-  it('get contents of new folder, expect new file from fixtures', async () => {
-    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
-    expect(contents.length).to.eql(1)
-    expect(contents[0].Name).to.eql(FILE_NAME)
-  })
-
-  it('upload file of different format (png) from fixtures', async () => {
-    const data = getBinaryData(path.resolve(__dirname, 'fixtures', FILE_NAME_1))
+  it('upload text file with filename 2', async () => {
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', TEXT_FILE_FILENAME))
 
     await sharepoint.createFile({
       path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME_1,
+      fileName: 'test-file-5.txt',
+      data
+    })
+  })
+
+  it('upload text file with filename 3', async () => {
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', TEXT_FILE_FILENAME))
+
+    await sharepoint.createFile({
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: 'test-file-10.txt',
+      data
+    })
+  })
+
+  it('upload text file with filename 4', async () => {
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', TEXT_FILE_FILENAME))
+
+    await sharepoint.createFile({
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: 'test-file-453446.txt',
+      data
+    })
+  })
+
+  it('get contents of new folder, expect 4 files sorted in specific order', async () => {
+    const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
+    expect(contents.length).to.eql(4)
+    expect(contents[0].Name).to.eql('test-file-0.txt')
+    expect(contents[1].Name).to.eql('test-file-5.txt')
+    expect(contents[2].Name).to.eql('test-file-10.txt')
+    expect(contents[3].Name).to.eql('test-file-453446.txt')
+  })
+
+  it('upload file of different format (png) from fixtures', async () => {
+    const data = getBinaryData(path.resolve(__dirname, 'fixtures', BINARY_FILE_FILENAME))
+
+    await sharepoint.createFile({
+      path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
+      fileName: BINARY_FILE_FILENAME,
       data
     })
   })
 
   it('get contents of new folder, expect new file of different format (png) from fixtures', async () => {
     const contents = await sharepoint.getContents(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`)
-    expect(contents.length).to.eql(2)
-    expect(contents.map(i => i.Name).includes(FILE_NAME_1)).to.eql(true)
+    expect(contents.length).to.eql(5)
+    expect(contents[4].Name).to.eql(BINARY_FILE_FILENAME)
   })
 
   it('upload file read in from fixtures using chunks', async () => {
-    const filePath = path.resolve(__dirname, 'fixtures', FILE_NAME_1)
+    const filePath = path.resolve(__dirname, 'fixtures', BINARY_FILE_FILENAME)
     const { size } = fs.statSync(filePath)
     const stream = fs.createReadStream(filePath, { highWaterMark: 1024 * 2 })
     await sharepoint.createFileChunked({
       path: `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME}`,
-      fileName: FILE_NAME_1,
+      fileName: BINARY_FILE_FILENAME,
       stream,
       fileSize: size,
       chunkSize: 1024 * 2
