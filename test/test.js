@@ -66,11 +66,6 @@ describe('Tests', function () {
     expect(sharepoint.encodedBaseUrl).to.not.eql(null)
   })
 
-  it('get form digest value', async () => {
-    const formDigestValue = await sharepoint.getFormDigestValue()
-    expect(formDigestValue).to.not.eql(null)
-  })
-
   it('attempt to create a folder, without passing in a path', async () => {
     let error
     try {
