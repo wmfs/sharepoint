@@ -46,7 +46,7 @@ describe('Tests', function () {
     try {
       new Sharepoint() // eslint-disable-line
     } catch (err) {
-      expect(err.message).to.eql('sharepoint site url has not been specified')
+      expect(err.message).to.eql('siteUrl has not been specified')
     }
   })
 
