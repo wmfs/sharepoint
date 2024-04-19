@@ -33,6 +33,14 @@ describe('Tests', function () {
     }
   })
 
+  it('attempt to construct a Sharepoint instance without passing in a siteUrl', () => {
+    try {
+      new Sharepoint() // eslint-disable-line
+    } catch (err) {
+      expect(err.message).to.eql('sharepoint site url has not been specified')
+    }
+  })
+
   it('construct Sharepoint instance', () => {
     sharepoint = new Sharepoint(process.env.SHAREPOINT_URL)
     expect(sharepoint.siteUrl).to.eql(process.env.SHAREPOINT_URL)
