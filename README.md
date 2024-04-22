@@ -53,7 +53,7 @@ This command will output something like this...
 
 > SHA1 Fingerprint=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
 
-Make a note of the fingerprint, but *get rid of the colons* - in your notes, the fingerprint should be exactly 40 character long.
+Make a note of the fingerprint, but *get rid of the colons* - in your notes, the fingerprint should be exactly 40 characters long.
 
 
 ### Register Application in Azure Portal
