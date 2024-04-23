@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/wmfs/sharepoint/compare/v1.19.0...v1.20.0) (2024-04-23)
+
+
+### Features
+
+* [sc-23880] Sharepoint authentication ([#281](https://github.com/wmfs/sharepoint/issues/281)) ([6957943](https://github.com/wmfs/sharepoint/commit/6957943121314ab56911249dbde02f889de86101))
+
 # [1.19.0](https://github.com/wmfs/sharepoint/compare/v1.18.0...v1.19.0) (2023-06-07)
 
 
