@@ -1,3 +1,5 @@
+# [1.22.0](https://github.com/wmfs/sharepoint/compare/v1.21.0...v1.22.0) (2024-06-17)
+
 # [1.21.0](https://github.com/wmfs/sharepoint/compare/v1.20.0...v1.21.0) (2024-06-17)
 
 # [1.20.0](https://github.com/wmfs/sharepoint/compare/v1.19.0...v1.20.0) (2024-04-23)
