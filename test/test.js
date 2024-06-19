@@ -417,6 +417,39 @@ describe('tests', function () {
       await sharepoint.deleteFolder(sourceFolderPath)
       await sharepoint.deleteFolder(targetFolderPath)
     })
+
+    it('create and move a folder', async () => {
+      const sourceFolderPath = `${process.env.SHAREPOINT_TESTS_DIR_PATH}/Source`
+      const targetFolderPath = `${process.env.SHAREPOINT_TESTS_DIR_PATH}/Target`
+
+      await sharepoint.createFolder(sourceFolderPath)
+      await sharepoint.createFolder(targetFolderPath)
+      await sharepoint.createFile({ path: sourceFolderPath, fileName: 'file-1.txt', data: 'File 1' })
+      await sharepoint.createFile({ path: sourceFolderPath, fileName: 'file-2.txt', data: 'File 2' })
+      await sharepoint.createFile({ path: sourceFolderPath, fileName: 'file-3.txt', data: 'File 3' })
+      await sharepoint.createFolder(`${sourceFolderPath}/Nested Folder`)
+      await sharepoint.createFile({ path: `${sourceFolderPath}/Nested Folder`, fileName: 'file-4.txt', data: 'File 4' })
+      await sharepoint.createFile({ path: `${sourceFolderPath}/Nested Folder`, fileName: 'file-5.txt', data: 'File 5' })
+
+      // Check contents before
+      const sourceFolderContentsBefore = await sharepoint.getContents(sourceFolderPath)
+      expect(sourceFolderContentsBefore.length).to.eql(4)
+
+      const targetFolderContentsBefore = await sharepoint.getContents(targetFolderPath)
+      expect(targetFolderContentsBefore.length).to.eql(0)
+
+      await sharepoint.moveFolder({ sourcePath: sourceFolderPath, targetPath: targetFolderPath })
+
+      // Check contents after
+      const sourceFolderContentsAfter = await sharepoint.getContents(sourceFolderPath)
+      expect(sourceFolderContentsAfter.length).to.eql(0)
+
+      const targetFolderContentsAfter = await sharepoint.getContents(targetFolderPath)
+      expect(targetFolderContentsAfter.length).to.eql(4)
+
+      await sharepoint.deleteFolder(sourceFolderPath)
+      await sharepoint.deleteFolder(targetFolderPath)
+    })
   })
 })
 
