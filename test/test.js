@@ -384,6 +384,39 @@ describe('tests', function () {
       expect(contents.map(i => i.Name).includes(FOLDER_NAME3)).to.eql(false)
       expect(contents.map(i => i.Name).includes(FOLDER_NAME4)).to.eql(false)
     })
+
+    it('create and move a file', async () => {
+      const sourceFolderPath = `${process.env.SHAREPOINT_TESTS_DIR_PATH}/Source`
+      const targetFolderPath = `${process.env.SHAREPOINT_TESTS_DIR_PATH}/Target`
+      const fileName = 'the-file-to-move.txt'
+      const data = 'This file will be moved!'
+
+      await sharepoint.createFolder(sourceFolderPath)
+      await sharepoint.createFolder(targetFolderPath)
+      await sharepoint.createFile({ path: sourceFolderPath, fileName, data })
+
+      // Check contents before
+      const sourceFolderContentsBefore = await sharepoint.getContents(sourceFolderPath)
+      expect(sourceFolderContentsBefore.length).to.eql(1)
+      expect(sourceFolderContentsBefore[0].Name).to.eql(fileName)
+
+      const targetFolderContentsBefore = await sharepoint.getContents(targetFolderPath)
+      expect(targetFolderContentsBefore.length).to.eql(0)
+
+      // Move file
+      await sharepoint.moveFile({ sourcePath: sourceFolderPath, targetPath: targetFolderPath, fileName })
+
+      // Check contents after
+      const sourceFolderContentsAfter = await sharepoint.getContents(sourceFolderPath)
+      expect(sourceFolderContentsAfter.length).to.eql(0)
+
+      const targetFolderContentsAfter = await sharepoint.getContents(targetFolderPath)
+      expect(targetFolderContentsAfter.length).to.eql(1)
+      expect(targetFolderContentsAfter[0].Name).to.eql(fileName)
+
+      await sharepoint.deleteFolder(sourceFolderPath)
+      await sharepoint.deleteFolder(targetFolderPath)
+    })
   })
 })
 
