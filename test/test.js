@@ -438,7 +438,7 @@ describe('tests', function () {
       const targetFolderContentsBefore = await sharepoint.getContents(targetFolderPath)
       expect(targetFolderContentsBefore.length).to.eql(0)
 
-      await sharepoint.moveFolder({ sourcePath: sourceFolderPath, targetPath: targetFolderPath })
+      await sharepoint.moveFolderContents({ sourcePath: sourceFolderPath, targetPath: targetFolderPath })
 
       // Check contents after
       const sourceFolderContentsAfter = await sharepoint.getContents(sourceFolderPath)
