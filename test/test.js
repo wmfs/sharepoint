@@ -331,26 +331,6 @@ describe('tests', function () {
       expect(contents[3].Name).to.eql(FILE_NAME1)
     })
 
-    it('download text file', async () => {
-      const targetPath = path.resolve(__dirname, 'output')
-
-      // Ensure target path exists
-      if (!fs.existsSync(targetPath)) {
-        fs.mkdirSync(targetPath)
-      }
-
-      // Download file to target path
-      await sharepoint.downloadFile(
-        `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}/${FILE_NAME1}`,
-        targetPath
-      )
-
-      // Check downloaded file content
-      const expectedText = await fs.readFileSync(path.join(__dirname, 'fixtures', 'Test.txt'), 'utf-8')
-      const downloadedText = await fs.readFileSync(path.join(targetPath, FILE_NAME1), 'utf-8')
-      expect(downloadedText).to.eql(expectedText)
-    })
-
     it('upload file of different format (png) from fixtures', async () => {
       const data = getBinaryData(path.resolve(__dirname, 'fixtures', BINARY_FILE_FILENAME))
 
@@ -378,6 +358,46 @@ describe('tests', function () {
         fileSize: size,
         chunkSize: 1024 * 2
       })
+    })
+
+    it('download text file', async () => {
+      const targetPath = path.resolve(__dirname, 'output')
+
+      // Ensure target path exists
+      if (!fs.existsSync(targetPath)) {
+        fs.mkdirSync(targetPath)
+      }
+
+      // Download file to target path
+      await sharepoint.downloadFile(
+        `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}/${FILE_NAME1}`,
+        targetPath
+      )
+
+      // Check downloaded file content
+      const expectedFile = await fs.readFileSync(path.join(__dirname, 'fixtures', 'Test.txt'), 'utf-8')
+      const downloadedFile = await fs.readFileSync(path.join(targetPath, FILE_NAME1), 'utf-8')
+      expect(downloadedFile).to.eql(expectedFile)
+    })
+
+    it('download binary file', async () => {
+      const targetPath = path.resolve(__dirname, 'output')
+
+      // Ensure target path exists
+      if (!fs.existsSync(targetPath)) {
+        fs.mkdirSync(targetPath)
+      }
+
+      // Download file to target path
+      await sharepoint.downloadFile(
+        `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}/${BINARY_FILE_FILENAME}`,
+        targetPath
+      )
+
+      // Check downloaded file content
+      const expectedFile = await fs.readFileSync(path.join(__dirname, 'fixtures', 'Test.png'), 'utf-8')
+      const downloadedFile = await fs.readFileSync(path.join(targetPath, BINARY_FILE_FILENAME), 'utf-8')
+      expect(downloadedFile).to.eql(expectedFile)
     })
 
     it('delete folder 1', async () => {
