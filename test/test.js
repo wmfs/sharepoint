@@ -331,6 +331,13 @@ describe('tests', function () {
       expect(contents[3].Name).to.eql(FILE_NAME1)
     })
 
+    it('download file 1', async () => {
+      await sharepoint.downloadFile(
+        `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}/${FILE_NAME1}`,
+        path.resolve(__dirname, 'output')
+      )
+    })
+
     it('upload file of different format (png) from fixtures', async () => {
       const data = getBinaryData(path.resolve(__dirname, 'fixtures', BINARY_FILE_FILENAME))
 
