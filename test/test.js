@@ -331,11 +331,24 @@ describe('tests', function () {
       expect(contents[3].Name).to.eql(FILE_NAME1)
     })
 
-    it('download file 1', async () => {
+    it('download text file', async () => {
+      const targetPath = path.resolve(__dirname, 'output')
+
+      // Ensure target path exists
+      if (!fs.existsSync(targetPath)) {
+        fs.mkdirSync(targetPath)
+      }
+
+      // Download file to target path
       await sharepoint.downloadFile(
         `${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}/${FILE_NAME1}`,
-        path.resolve(__dirname, 'output')
+        targetPath
       )
+
+      // Check downloaded file content
+      const expectedText = await fs.readFileSync(path.join(__dirname, 'fixtures', 'Test.txt'), 'utf-8')
+      const downloadedText = await fs.readFileSync(path.join(targetPath, FILE_NAME1), 'utf-8')
+      expect(downloadedText).to.eql(expectedText)
     })
 
     it('upload file of different format (png) from fixtures', async () => {
