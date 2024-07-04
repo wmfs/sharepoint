@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/wmfs/sharepoint/compare/v1.22.0...v1.23.0) (2024-07-04)
+
+
+### Features
+
+* **(pin 262) crr dd:** [sc-25086] Remove manage in SharePoint unless a file uploaded [#292](https://github.com/wmfs/sharepoint/issues/292) ([be4ef8e](https://github.com/wmfs/sharepoint/commit/be4ef8eaef15d568f232158da55b1f9ac48bcbd9))
+
 # [1.22.0](https://github.com/wmfs/sharepoint/compare/v1.21.0...v1.22.0) (2024-06-17)
 
 # [1.21.0](https://github.com/wmfs/sharepoint/compare/v1.20.0...v1.21.0) (2024-06-17)
