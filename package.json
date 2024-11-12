@@ -19,7 +19,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "@azure/msal-node": "2.16.0",
+    "@azure/msal-node": "2.16.1",
     "axios": "1.7.7",
     "uuid": "11.0.3"
   },
