@@ -172,3 +172,4 @@ npm run test
 
 ## <a name="license"></a>License
 [MIT](https://github.com/wmfs/sharepoint/blob/master/LICENSE)
+
