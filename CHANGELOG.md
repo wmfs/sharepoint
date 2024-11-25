@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/wmfs/sharepoint/compare/v1.31.0...v1.31.1) (2024-11-25)
+
+
+### Bug Fixes
+
+* force build ([2303a36](https://github.com/wmfs/sharepoint/commit/2303a36cac1feb6bf27df9e222ade68027df3281))
+
 # [1.31.0](https://github.com/wmfs/sharepoint/compare/v1.30.0...v1.31.0) (2024-11-20)
 
 # [1.30.0](https://github.com/wmfs/sharepoint/compare/v1.29.0...v1.30.0) (2024-11-13)
