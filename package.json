@@ -26,7 +26,7 @@
   "devDependencies": {
     "chai": "4.5.0",
     "mocha": "11.0.1",
-    "dotenv": "16.4.6",
+    "dotenv": "16.4.7",
     "codecov": "3.8.3",
     "conventional-changelog-metahub": "4.0.1",
     "cz-conventional-changelog": "3.3.0",
