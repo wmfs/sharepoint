@@ -1,3 +1,11 @@
+## [1.34.0](https://github.com/wmfs/sharepoint/compare/v1.33.0...v1.34.0) (2025-01-06)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** [sc-29160] Resolve issue with semantic-release changelog notes ([#327](https://github.com/wmfs/sharepoint/issues/327)) ([5db44eb](https://github.com/wmfs/sharepoint/commit/5db44eb05bbc28b9cf8b3c3b2b1e8c94c917a2fb))
+* **deps-dev:** update dependency semantic-release to v24.2.1 ([#325](https://github.com/wmfs/sharepoint/issues/325)) ([a8d5ac6](https://github.com/wmfs/sharepoint/commit/a8d5ac68fbc5d2bb24fe95d5080d6c56b8042476))
+* **deps:** update dependency uuid to v11.0.4 ([#326](https://github.com/wmfs/sharepoint/issues/326)) ([f47a19c](https://github.com/wmfs/sharepoint/commit/f47a19c829892af77106ae964c4d7324afb93607))
+
 # [1.33.0](https://github.com/wmfs/sharepoint/compare/v1.32.0...v1.33.0) (2024-12-09)
 
 # [1.32.0](https://github.com/wmfs/sharepoint/compare/v1.31.1...v1.32.0) (2024-11-26)
