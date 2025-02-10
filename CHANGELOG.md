@@ -1,3 +1,10 @@
+## [1.38.0](https://github.com/wmfs/sharepoint/compare/v1.37.0...v1.38.0) (2025-02-10)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency semantic-release to v24.2.2 ([#333](https://github.com/wmfs/sharepoint/issues/333)) ([a3d6d29](https://github.com/wmfs/sharepoint/commit/a3d6d298a9190694c07e887a2a6d8940c7a46c5a))
+* **deps:** update dependency @azure/msal-node to v3.2.1 ([#332](https://github.com/wmfs/sharepoint/issues/332)) ([2d8fa7d](https://github.com/wmfs/sharepoint/commit/2d8fa7da68e6fb588bb01731be911be0bbd7c9a1))
+
 ## [1.37.0](https://github.com/wmfs/sharepoint/compare/v1.36.0...v1.37.0) (2025-01-23)
 
 ### Build system dependencies :hammer:
