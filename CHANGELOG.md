@@ -1,3 +1,9 @@
+## [1.39.0](https://github.com/wmfs/sharepoint/compare/v1.38.0...v1.39.0) (2025-02-12)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.2.2 ([#334](https://github.com/wmfs/sharepoint/issues/334)) ([70b70e7](https://github.com/wmfs/sharepoint/commit/70b70e7829126b09771e445abc5363ec805778ce))
+
 ## [1.38.0](https://github.com/wmfs/sharepoint/compare/v1.37.0...v1.38.0) (2025-02-10)
 
 ### Build system dependencies :hammer:
