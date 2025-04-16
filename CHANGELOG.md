@@ -1,3 +1,10 @@
+## [1.50.0](https://github.com/wmfs/sharepoint/compare/v1.49.0...v1.50.0) (2025-04-16)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency dotenv to v16.5.0 ([#347](https://github.com/wmfs/sharepoint/issues/347)) ([616f1fd](https://github.com/wmfs/sharepoint/commit/616f1fd0f3010a32da3fededcebd9dd022e11402))
+* **deps:** update dependency @azure/msal-node to v3.5.1 ([#348](https://github.com/wmfs/sharepoint/issues/348)) ([39310b1](https://github.com/wmfs/sharepoint/commit/39310b1d4300fa0d66b2fd67e37f4b0e0fa11632))
+
 ## [1.49.0](https://github.com/wmfs/sharepoint/compare/v1.48.0...v1.49.0) (2025-04-09)
 
 ### Build system dependencies :hammer:
