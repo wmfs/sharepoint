@@ -1,3 +1,9 @@
+## [1.51.0](https://github.com/wmfs/sharepoint/compare/v1.50.0...v1.51.0) (2025-04-23)
+
+### New Feature(s) :rocket:
+
+* [sc-30319] Capture Tymly upload metadata [#345](https://github.com/wmfs/sharepoint/issues/345) ([263c9ea](https://github.com/wmfs/sharepoint/commit/263c9ea91a5d22aa777a65b5943e01607a5badf8))
+
 ## [1.50.0](https://github.com/wmfs/sharepoint/compare/v1.49.0...v1.50.0) (2025-04-16)
 
 ### Build system dependencies :hammer:
