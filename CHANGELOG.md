@@ -1,3 +1,157 @@
+## [1.52.0](https://github.com/wmfs/sharepoint/compare/v1.51.0...v1.52.0) (2025-04-25)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.9.0 ([#349](https://github.com/wmfs/sharepoint/issues/349)) ([8e8a1aa](https://github.com/wmfs/sharepoint/commit/8e8a1aaea19acb2bb0f4116aca70d209c089a4f2))
+
+## [1.51.0](https://github.com/wmfs/sharepoint/compare/v1.50.0...v1.51.0) (2025-04-23)
+
+### New Feature(s) :rocket:
+
+* [sc-30319] Capture Tymly upload metadata [#345](https://github.com/wmfs/sharepoint/issues/345) ([263c9ea](https://github.com/wmfs/sharepoint/commit/263c9ea91a5d22aa777a65b5943e01607a5badf8))
+
+## [1.50.0](https://github.com/wmfs/sharepoint/compare/v1.49.0...v1.50.0) (2025-04-16)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency dotenv to v16.5.0 ([#347](https://github.com/wmfs/sharepoint/issues/347)) ([616f1fd](https://github.com/wmfs/sharepoint/commit/616f1fd0f3010a32da3fededcebd9dd022e11402))
+* **deps:** update dependency @azure/msal-node to v3.5.1 ([#348](https://github.com/wmfs/sharepoint/issues/348)) ([39310b1](https://github.com/wmfs/sharepoint/commit/39310b1d4300fa0d66b2fd67e37f4b0e0fa11632))
+
+## [1.49.0](https://github.com/wmfs/sharepoint/compare/v1.48.0...v1.49.0) (2025-04-09)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.5.0 ([#346](https://github.com/wmfs/sharepoint/issues/346)) ([a3969b4](https://github.com/wmfs/sharepoint/commit/a3969b45a39db2a4a7e4cefc232d066ca037337c))
+
+## [1.48.0](https://github.com/wmfs/sharepoint/compare/v1.47.0...v1.48.0) (2025-03-31)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.4.1 ([#344](https://github.com/wmfs/sharepoint/issues/344)) ([6f954ab](https://github.com/wmfs/sharepoint/commit/6f954ab6ea421fb2e615a7580cb49ccc6d9119dd))
+
+## [1.47.0](https://github.com/wmfs/sharepoint/compare/v1.46.0...v1.47.0) (2025-03-21)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.4.0 ([#343](https://github.com/wmfs/sharepoint/issues/343)) ([deb4bad](https://github.com/wmfs/sharepoint/commit/deb4badcce8125e1d9ff0d7ff9d605e3b7654e76))
+
+## [1.46.0](https://github.com/wmfs/sharepoint/compare/v1.45.0...v1.46.0) (2025-03-20)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.8.4 ([#342](https://github.com/wmfs/sharepoint/issues/342)) ([a52ba06](https://github.com/wmfs/sharepoint/commit/a52ba0674aac210f70dc989be7277287fd03cd72))
+
+## [1.45.0](https://github.com/wmfs/sharepoint/compare/v1.44.0...v1.45.0) (2025-03-12)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.8.3 ([#341](https://github.com/wmfs/sharepoint/issues/341)) ([a41d547](https://github.com/wmfs/sharepoint/commit/a41d547ff682a6c730b6efb4b3c2104fe15c2cce))
+
+## [1.44.0](https://github.com/wmfs/sharepoint/compare/v1.43.0...v1.44.0) (2025-03-12)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.3.0 ([#340](https://github.com/wmfs/sharepoint/issues/340)) ([830d32d](https://github.com/wmfs/sharepoint/commit/830d32d98f6bf89745e9349933d674fe5e08ea76))
+
+## [1.43.0](https://github.com/wmfs/sharepoint/compare/v1.42.0...v1.43.0) (2025-03-10)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.8.2 ([#339](https://github.com/wmfs/sharepoint/issues/339)) ([4959515](https://github.com/wmfs/sharepoint/commit/495951545a5579ebf8360add077a0bae7a6d316c))
+
+## [1.42.0](https://github.com/wmfs/sharepoint/compare/v1.41.0...v1.42.0) (2025-02-28)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.8.1 ([#338](https://github.com/wmfs/sharepoint/issues/338)) ([01207cd](https://github.com/wmfs/sharepoint/commit/01207cdc8f84be6654cfe57736b29b0c91d791fe))
+
+## [1.41.0](https://github.com/wmfs/sharepoint/compare/v1.40.0...v1.41.0) (2025-02-20)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency uuid to v11.1.0 ([#337](https://github.com/wmfs/sharepoint/issues/337)) ([33511c1](https://github.com/wmfs/sharepoint/commit/33511c119aaee6320ee1dac2c3f4feca93fb489d))
+
+## [1.40.0](https://github.com/wmfs/sharepoint/compare/v1.39.0...v1.40.0) (2025-02-19)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency semantic-release to v24.2.3 ([#335](https://github.com/wmfs/sharepoint/issues/335)) ([ca878e1](https://github.com/wmfs/sharepoint/commit/ca878e1de9ef08a5a9aea7f9b32e4f6aafef0378))
+* **deps:** update dependency @azure/msal-node to v3.2.3 ([#336](https://github.com/wmfs/sharepoint/issues/336)) ([e03069a](https://github.com/wmfs/sharepoint/commit/e03069a5828096d6ebb1cb1dd7d29f38014f4616))
+
+## [1.39.0](https://github.com/wmfs/sharepoint/compare/v1.38.0...v1.39.0) (2025-02-12)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3.2.2 ([#334](https://github.com/wmfs/sharepoint/issues/334)) ([70b70e7](https://github.com/wmfs/sharepoint/commit/70b70e7829126b09771e445abc5363ec805778ce))
+
+## [1.38.0](https://github.com/wmfs/sharepoint/compare/v1.37.0...v1.38.0) (2025-02-10)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency semantic-release to v24.2.2 ([#333](https://github.com/wmfs/sharepoint/issues/333)) ([a3d6d29](https://github.com/wmfs/sharepoint/commit/a3d6d298a9190694c07e887a2a6d8940c7a46c5a))
+* **deps:** update dependency @azure/msal-node to v3.2.1 ([#332](https://github.com/wmfs/sharepoint/issues/332)) ([2d8fa7d](https://github.com/wmfs/sharepoint/commit/2d8fa7da68e6fb588bb01731be911be0bbd7c9a1))
+
+## [1.37.0](https://github.com/wmfs/sharepoint/compare/v1.36.0...v1.37.0) (2025-01-23)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency mocha to v11.1.0 ([#330](https://github.com/wmfs/sharepoint/issues/330)) ([dca5ecd](https://github.com/wmfs/sharepoint/commit/dca5ecdf185e8de1e36837f84fb09f674b25154a))
+* **deps:** update dependency @azure/msal-node to v3.1.0 ([#331](https://github.com/wmfs/sharepoint/issues/331)) ([b2e03c6](https://github.com/wmfs/sharepoint/commit/b2e03c6f23c260b67bd0ae5ac3232e1d5fb39f91))
+
+## [1.36.0](https://github.com/wmfs/sharepoint/compare/v1.35.0...v1.36.0) (2025-01-15)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @azure/msal-node to v3 ([#329](https://github.com/wmfs/sharepoint/issues/329)) ([357734b](https://github.com/wmfs/sharepoint/commit/357734b55e15b4115000abbf7e24da2e487b6212))
+
+## [1.35.0](https://github.com/wmfs/sharepoint/compare/v1.34.0...v1.35.0) (2025-01-10)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency uuid to v11.0.5 ([#328](https://github.com/wmfs/sharepoint/issues/328)) ([30de35b](https://github.com/wmfs/sharepoint/commit/30de35b3f46c3a4d1a75e777e6213570db5adeed))
+
+## [1.34.0](https://github.com/wmfs/sharepoint/compare/v1.33.0...v1.34.0) (2025-01-06)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** [sc-29160] Resolve issue with semantic-release changelog notes ([#327](https://github.com/wmfs/sharepoint/issues/327)) ([5db44eb](https://github.com/wmfs/sharepoint/commit/5db44eb05bbc28b9cf8b3c3b2b1e8c94c917a2fb))
+* **deps-dev:** update dependency semantic-release to v24.2.1 ([#325](https://github.com/wmfs/sharepoint/issues/325)) ([a8d5ac6](https://github.com/wmfs/sharepoint/commit/a8d5ac68fbc5d2bb24fe95d5080d6c56b8042476))
+* **deps:** update dependency uuid to v11.0.4 ([#326](https://github.com/wmfs/sharepoint/issues/326)) ([f47a19c](https://github.com/wmfs/sharepoint/commit/f47a19c829892af77106ae964c4d7324afb93607))
+
+# [1.33.0](https://github.com/wmfs/sharepoint/compare/v1.32.0...v1.33.0) (2024-12-09)
+
+# [1.32.0](https://github.com/wmfs/sharepoint/compare/v1.31.1...v1.32.0) (2024-11-26)
+
+## [1.31.1](https://github.com/wmfs/sharepoint/compare/v1.31.0...v1.31.1) (2024-11-25)
+
+
+### Bug Fixes
+
+* force build ([2303a36](https://github.com/wmfs/sharepoint/commit/2303a36cac1feb6bf27df9e222ade68027df3281))
+
+# [1.31.0](https://github.com/wmfs/sharepoint/compare/v1.30.0...v1.31.0) (2024-11-20)
+
+# [1.30.0](https://github.com/wmfs/sharepoint/compare/v1.29.0...v1.30.0) (2024-11-13)
+
+# [1.29.0](https://github.com/wmfs/sharepoint/compare/v1.28.0...v1.29.0) (2024-11-12)
+
+# [1.28.0](https://github.com/wmfs/sharepoint/compare/v1.27.0...v1.28.0) (2024-11-06)
+
+# [1.27.0](https://github.com/wmfs/sharepoint/compare/v1.26.0...v1.27.0) (2024-11-04)
+
+# [1.26.0](https://github.com/wmfs/sharepoint/compare/v1.25.0...v1.26.0) (2024-11-04)
+
+# [1.25.0](https://github.com/wmfs/sharepoint/compare/v1.24.0...v1.25.0) (2024-11-04)
+
+# [1.24.0](https://github.com/wmfs/sharepoint/compare/v1.23.0...v1.24.0) (2024-11-04)
+
+# [1.23.0](https://github.com/wmfs/sharepoint/compare/v1.22.0...v1.23.0) (2024-07-04)
+
+
+### Features
+
+* **(pin 262) crr dd:** [sc-25086] Remove manage in SharePoint unless a file uploaded [#292](https://github.com/wmfs/sharepoint/issues/292) ([be4ef8e](https://github.com/wmfs/sharepoint/commit/be4ef8eaef15d568f232158da55b1f9ac48bcbd9))
+
 # [1.22.0](https://github.com/wmfs/sharepoint/compare/v1.21.0...v1.22.0) (2024-06-17)
 
 # [1.21.0](https://github.com/wmfs/sharepoint/compare/v1.20.0...v1.21.0) (2024-06-17)

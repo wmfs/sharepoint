@@ -226,8 +226,18 @@ describe('tests', function () {
       expect(contents.length).to.eql(0)
     })
 
+    it('check main test folder exists before creating it', async () => {
+      const result = await sharepoint.checkFolderExists(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}`)
+      expect(result).to.eql(false)
+    })
+
     it('create main test folder', async () => {
       await sharepoint.createFolder(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}`)
+    })
+
+    it('check main test folder exists after creating it', async () => {
+      const result = await sharepoint.checkFolderExists(`${process.env.SHAREPOINT_TESTS_DIR_PATH}/${FOLDER_NAME1}`)
+      expect(result).to.eql(true)
     })
 
     it('create test folder 2', async () => {
