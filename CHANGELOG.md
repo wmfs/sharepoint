@@ -1,3 +1,10 @@
+## [1.56.0](https://github.com/wmfs/sharepoint/compare/v1.55.0...v1.56.0) (2025-06-16)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency mocha to v11.6.0 ([#360](https://github.com/wmfs/sharepoint/issues/360)) ([f2e6ac8](https://github.com/wmfs/sharepoint/commit/f2e6ac8dad0983a60de365d0495f7977b780fc84))
+* **deps:** update dependency axios to v1.10.0 ([#361](https://github.com/wmfs/sharepoint/issues/361)) ([813d917](https://github.com/wmfs/sharepoint/commit/813d917474b7ffe2e1d7834cb23ea4a0d456f985))
+
 ## [1.55.0](https://github.com/wmfs/sharepoint/compare/v1.54.0...v1.55.0) (2025-06-02)
 
 ### Build system dependencies :hammer:
