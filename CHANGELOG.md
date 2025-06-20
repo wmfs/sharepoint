@@ -1,3 +1,10 @@
+## [1.57.0](https://github.com/wmfs/sharepoint/compare/v1.56.0...v1.57.0) (2025-06-20)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency mocha to v11.7.0 ([#362](https://github.com/wmfs/sharepoint/issues/362)) ([ef1f565](https://github.com/wmfs/sharepoint/commit/ef1f565259c3af334f1f2ff5f9a2e17367eb2e93))
+* **deps:** update dependency @azure/msal-node to v3.6.1 ([#363](https://github.com/wmfs/sharepoint/issues/363)) ([8dc5620](https://github.com/wmfs/sharepoint/commit/8dc562072d99e1ca2db9062fcf98756414060891))
+
 ## [1.56.0](https://github.com/wmfs/sharepoint/compare/v1.55.0...v1.56.0) (2025-06-16)
 
 ### Build system dependencies :hammer:
