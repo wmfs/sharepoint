@@ -1,3 +1,15 @@
+## [1.58.0](https://github.com/wmfs/sharepoint/compare/v1.57.0...v1.58.0) (2025-07-02)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency dotenv to v16.6.0 ([#365](https://github.com/wmfs/sharepoint/issues/365)) ([525f72e](https://github.com/wmfs/sharepoint/commit/525f72ebf9c6e13cf8455d17b02017b36007e6d1))
+* **deps-dev:** update dependency dotenv to v16.6.1 ([#366](https://github.com/wmfs/sharepoint/issues/366)) ([ca4f0a3](https://github.com/wmfs/sharepoint/commit/ca4f0a3de0d938467ac1386727e32480b906bfd2))
+* **deps-dev:** update dependency dotenv to v17 ([#367](https://github.com/wmfs/sharepoint/issues/367)) ([1c62971](https://github.com/wmfs/sharepoint/commit/1c62971560f796a17e8ecb95977c9874babdfa6f))
+* **deps-dev:** update dependency dotenv to v17.0.1 ([#369](https://github.com/wmfs/sharepoint/issues/369)) ([2bd4705](https://github.com/wmfs/sharepoint/commit/2bd47058113cb465ac6a0714f9d8481a11964efa))
+* **deps-dev:** update dependency mocha to v11.7.1 ([#364](https://github.com/wmfs/sharepoint/issues/364)) ([0e9b774](https://github.com/wmfs/sharepoint/commit/0e9b774ddcae693c8604d732d7d606d4d8aba4f6))
+* **deps-dev:** update dependency semantic-release to v24.2.6 ([#368](https://github.com/wmfs/sharepoint/issues/368)) ([2373156](https://github.com/wmfs/sharepoint/commit/237315693f91da39acf117274e7b6489c9f72efe))
+* **deps:** update dependency @azure/msal-node to v3.6.2 ([#370](https://github.com/wmfs/sharepoint/issues/370)) ([e93626a](https://github.com/wmfs/sharepoint/commit/e93626a881bc3bd8c0e369efd3eee7d93b46b629))
+
 ## [1.57.0](https://github.com/wmfs/sharepoint/compare/v1.56.0...v1.57.0) (2025-06-20)
 
 ### Build system dependencies :hammer:
