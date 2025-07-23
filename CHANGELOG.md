@@ -1,3 +1,11 @@
+## [1.60.0](https://github.com/wmfs/sharepoint/compare/v1.59.0...v1.60.0) (2025-07-23)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#374](https://github.com/wmfs/sharepoint/issues/374)) ([2ae0372](https://github.com/wmfs/sharepoint/commit/2ae03725eb7e4de634c6c8ac6781f92cf57d2242))
+* **deps-dev:** update dependency semantic-release to v24.2.7 ([#375](https://github.com/wmfs/sharepoint/issues/375)) ([098ae33](https://github.com/wmfs/sharepoint/commit/098ae332505e55c729260a84ca90aac9dc3ef106))
+* **deps:** update axios from 1.10.0 to 1.11.0 ([4b5bc5a](https://github.com/wmfs/sharepoint/commit/4b5bc5af478da55491ea95f25ef8ede782b464be))
+
 ## [1.59.0](https://github.com/wmfs/sharepoint/compare/v1.58.0...v1.59.0) (2025-07-10)
 
 ### Build system dependencies :hammer:
