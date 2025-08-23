@@ -24,7 +24,7 @@
     "uuid": "11.1.0"
   },
   "devDependencies": {
-    "chai": "4.5.0",
+    "chai": "6.0.1",
     "mocha": "11.7.1",
     "dotenv": "17.2.1",
     "codecov": "3.8.3",
