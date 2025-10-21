@@ -1,3 +1,22 @@
+## [1.61.0](https://github.com/wmfs/sharepoint/compare/v1.60.0...v1.61.0) (2025-10-21)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/release-notes-generator to v14.1.0 ([#382](https://github.com/wmfs/sharepoint/issues/382)) ([f4a10cd](https://github.com/wmfs/sharepoint/commit/f4a10cd0f7418203b1624b6c0354322e2ff58f77))
+* **deps-dev:** update dependency chai to v6 ([#378](https://github.com/wmfs/sharepoint/issues/378)) ([b901f6a](https://github.com/wmfs/sharepoint/commit/b901f6a6ac30660d37f918c4191a14fb58d06d50))
+* **deps-dev:** update dependency chai to v6.2.0 ([#389](https://github.com/wmfs/sharepoint/issues/389)) ([3c333d4](https://github.com/wmfs/sharepoint/commit/3c333d4246f6ee7a7e3e858208dc4c53a8661bf8))
+* **deps-dev:** update dependency dotenv to v17.2.1 ([#377](https://github.com/wmfs/sharepoint/issues/377)) ([f49314e](https://github.com/wmfs/sharepoint/commit/f49314ec80372f4f5d3565af9c16a02386192109))
+* **deps-dev:** update dependency dotenv to v17.2.2 ([#380](https://github.com/wmfs/sharepoint/issues/380)) ([9e28d53](https://github.com/wmfs/sharepoint/commit/9e28d536444178bd7a9d509e6c4d9788a07574da))
+* **deps-dev:** update dependency dotenv to v17.2.3 ([#391](https://github.com/wmfs/sharepoint/issues/391)) ([6b87768](https://github.com/wmfs/sharepoint/commit/6b877688ef5f877005041a072e2a51ee4b09fe23))
+* **deps-dev:** update dependency mocha to v11.7.2 ([#379](https://github.com/wmfs/sharepoint/issues/379)) ([5ede7ad](https://github.com/wmfs/sharepoint/commit/5ede7ad5c5b19bac185be78968e9e745e091121d))
+* **deps-dev:** update dependency mocha to v11.7.3 ([#392](https://github.com/wmfs/sharepoint/issues/392)) ([839e807](https://github.com/wmfs/sharepoint/commit/839e807de202ce9adc226cc3243da3904393d312))
+* **deps-dev:** update dependency mocha to v11.7.4 ([#393](https://github.com/wmfs/sharepoint/issues/393)) ([65df42e](https://github.com/wmfs/sharepoint/commit/65df42ed6d364d9246574e3c3d8e7e2a08b8cda3))
+* **deps-dev:** update dependency semantic-release to v24.2.8 ([#384](https://github.com/wmfs/sharepoint/issues/384)) ([ff9838c](https://github.com/wmfs/sharepoint/commit/ff9838c465b3bc00a47cd83cc2965aaac3a64006))
+* **deps-dev:** update dependency semantic-release to v24.2.9 ([#388](https://github.com/wmfs/sharepoint/issues/388)) ([012aebf](https://github.com/wmfs/sharepoint/commit/012aebf972cfad2cf10adfdfdc85c00cc9eae81b))
+* **deps-dev:** update dependency semantic-release to v25 ([#394](https://github.com/wmfs/sharepoint/issues/394)) ([adcb0a0](https://github.com/wmfs/sharepoint/commit/adcb0a076612827b5284149b96b5a7dafeb94f56))
+* **deps-dev:** update dependency semantic-release to v25.0.1 ([#395](https://github.com/wmfs/sharepoint/issues/395)) ([55b1012](https://github.com/wmfs/sharepoint/commit/55b10125cdcb356ac981dd7139d8808eed828c97))
+* **deps:** revert chai to non-esm ([042731d](https://github.com/wmfs/sharepoint/commit/042731dc502614151fa910c7c8c757f0fa84cd10))
+
 ## [1.60.0](https://github.com/wmfs/sharepoint/compare/v1.59.0...v1.60.0) (2025-07-23)
 
 ### Build system dependencies :hammer:
