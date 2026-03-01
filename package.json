@@ -28,7 +28,7 @@
     "mocha": "11.7.5",
     "dotenv": "17.3.1",
     "codecov": "3.8.3",
-    "conventional-changelog-conventionalcommits": "9.1.0",
+    "conventional-changelog-conventionalcommits": "9.2.0",
     "cz-conventional-changelog": "3.3.0",
     "nyc": "18.0.0",
     "standard": "17.1.2",
