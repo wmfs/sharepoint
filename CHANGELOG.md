@@ -1,3 +1,20 @@
+## [1.62.0](https://github.com/wmfs/sharepoint/compare/v1.61.0...v1.62.0) (2026-04-10)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.2.0 ([#405](https://github.com/wmfs/sharepoint/issues/405)) ([0946ae9](https://github.com/wmfs/sharepoint/commit/0946ae9d10372f689b1861f2a7b4cc1d8162d386))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.3.0 ([#406](https://github.com/wmfs/sharepoint/issues/406)) ([b1c454e](https://github.com/wmfs/sharepoint/commit/b1c454e7cd365f7fabf1e3effe3a18641939f2d9))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.3.1 ([#408](https://github.com/wmfs/sharepoint/issues/408)) ([2115996](https://github.com/wmfs/sharepoint/commit/211599623c847aa638f04a6fcee4bef4b73ab17a))
+* **deps-dev:** update dependency dotenv to v17.2.4 ([#401](https://github.com/wmfs/sharepoint/issues/401)) ([264a2d6](https://github.com/wmfs/sharepoint/commit/264a2d617b02f71e99afd199ee6077ac12a8338e))
+* **deps-dev:** update dependency dotenv to v17.3.1 ([#403](https://github.com/wmfs/sharepoint/issues/403)) ([c2d0f85](https://github.com/wmfs/sharepoint/commit/c2d0f85c6727e22d6c485ff53fdac206414da575))
+* **deps-dev:** update dependency dotenv to v17.4.0 ([#409](https://github.com/wmfs/sharepoint/issues/409)) ([766b9a5](https://github.com/wmfs/sharepoint/commit/766b9a50b1fcf402e0d3b003c97466331b321439))
+* **deps-dev:** update dependency dotenv to v17.4.1 ([#410](https://github.com/wmfs/sharepoint/issues/410)) ([52a1355](https://github.com/wmfs/sharepoint/commit/52a13558de49d5aa966eaa671145e052e46c5954))
+* **deps-dev:** update dependency mocha to v11.7.5 ([#397](https://github.com/wmfs/sharepoint/issues/397)) ([feacb6a](https://github.com/wmfs/sharepoint/commit/feacb6aa5ebc167f69eef0f427a49edffcb18907))
+* **deps-dev:** update dependency nyc to v18 ([#404](https://github.com/wmfs/sharepoint/issues/404)) ([8c3dbb2](https://github.com/wmfs/sharepoint/commit/8c3dbb22910dbcad741342b6acf5e852ca9732af))
+* **deps-dev:** update dependency semantic-release to v25.0.2 ([#398](https://github.com/wmfs/sharepoint/issues/398)) ([3363e1d](https://github.com/wmfs/sharepoint/commit/3363e1d87fb86d0add3ace34304e20892240d818))
+* **deps-dev:** update dependency semantic-release to v25.0.3 ([#400](https://github.com/wmfs/sharepoint/issues/400)) ([c1834bf](https://github.com/wmfs/sharepoint/commit/c1834bf5deaea749deee2ed52376d7b1012908ac))
+* **deps:** bump axios ([66d1381](https://github.com/wmfs/sharepoint/commit/66d138197592d091d34c46fd52f3fc6ab963b0d6))
+
 ## [1.61.0](https://github.com/wmfs/sharepoint/compare/v1.60.0...v1.61.0) (2025-10-21)
 
 ### Build system dependencies :hammer:
