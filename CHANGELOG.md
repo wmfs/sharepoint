@@ -1,3 +1,5 @@
+## [1.62.1](https://github.com/wmfs/sharepoint/compare/v1.62.0...v1.62.1) (2026-08-13)
+
 ## [1.62.0](https://github.com/wmfs/sharepoint/compare/v1.61.0...v1.62.0) (2026-04-10)
 
 ### Build system dependencies :hammer:
