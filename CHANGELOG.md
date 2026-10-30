@@ -1,3 +1,32 @@
+## [1.63.0](https://github.com/wmfs/sharepoint/compare/v1.62.1...v1.63.0) (2026-10-30)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** fix conventionalcommit versions [sc-34125] ([df0e1e1](https://github.com/wmfs/sharepoint/commit/df0e1e12c8296de5abb6ffea7ae6c5e9d0307060))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.0 ([#437](https://github.com/wmfs/sharepoint/issues/437)) ([581288c](https://github.com/wmfs/sharepoint/commit/581288c4cdd3e2e55d2f0d2d5c77c9f90b5cc901))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.1 ([#448](https://github.com/wmfs/sharepoint/issues/448)) ([074c516](https://github.com/wmfs/sharepoint/commit/074c516d30096795f9f83c7d24e001cfc3cd279f))
+* **deps-dev:** update dependency dotenv to v18 ([#441](https://github.com/wmfs/sharepoint/issues/441)) ([829a860](https://github.com/wmfs/sharepoint/commit/829a860c2e2904bdda13cd12037428532f35aa02))
+* **deps-dev:** update dependency dotenv to v18.0.1 ([#442](https://github.com/wmfs/sharepoint/issues/442)) ([86eb479](https://github.com/wmfs/sharepoint/commit/86eb479464be0e67492502fd3528b358a2dbec0c))
+* **deps-dev:** update dependency dotenv to v18.0.2 ([#443](https://github.com/wmfs/sharepoint/issues/443)) ([3545bb4](https://github.com/wmfs/sharepoint/commit/3545bb4cd5ba914e20c3a9108d9dc6820bd00529))
+* **deps-dev:** update dependency dotenv to v18.0.3 ([#444](https://github.com/wmfs/sharepoint/issues/444)) ([676645c](https://github.com/wmfs/sharepoint/commit/676645ce7a577b5fac99de29de0bfca367f5e3a1))
+* **deps-dev:** update dependency dotenv to v18.0.4 ([#445](https://github.com/wmfs/sharepoint/issues/445)) ([801ec41](https://github.com/wmfs/sharepoint/commit/801ec41de4ea7bbbdb9ac083226ca42b559e98af))
+* **deps-dev:** update dependency dotenv to v18.0.5 ([#446](https://github.com/wmfs/sharepoint/issues/446)) ([e1e1b6c](https://github.com/wmfs/sharepoint/commit/e1e1b6c7cc6153a3e5ac0ce0f36b0f7e9e49a06b))
+* **deps-dev:** update dependency dotenv to v18.0.6 ([#449](https://github.com/wmfs/sharepoint/issues/449)) ([28136f8](https://github.com/wmfs/sharepoint/commit/28136f8c3e36efb5c3fb8a7e8eaaec0a969207fd))
+* **deps-dev:** update dependency dotenv to v18.0.7 ([#450](https://github.com/wmfs/sharepoint/issues/450)) ([83f52d7](https://github.com/wmfs/sharepoint/commit/83f52d7ff4e2a64fff54b2cef0988e236d87e5af))
+* **deps-dev:** update dependency dotenv to v18.0.8 ([#451](https://github.com/wmfs/sharepoint/issues/451)) ([23464f0](https://github.com/wmfs/sharepoint/commit/23464f0e27994e8f86c63e9cf80cd0d69e4845e3))
+* **deps-dev:** update dependency dotenv to v18.0.9 ([#454](https://github.com/wmfs/sharepoint/issues/454)) ([08b67a5](https://github.com/wmfs/sharepoint/commit/08b67a52535c4f47c3729c87ba9b5202925c9a3c))
+* **deps-dev:** update dependency mocha to v12 ([#438](https://github.com/wmfs/sharepoint/issues/438)) ([65c640c](https://github.com/wmfs/sharepoint/commit/65c640c6fd5a5e5dc2193c8db4acaf7584a2dfdc))
+* **deps-dev:** update dependency mocha to v12.0.1 ([#439](https://github.com/wmfs/sharepoint/issues/439)) ([5d29c7b](https://github.com/wmfs/sharepoint/commit/5d29c7bbcea7da49774cb6c6184484cb4a569b05))
+* **deps-dev:** update dependency mocha to v12.0.2 ([#440](https://github.com/wmfs/sharepoint/issues/440)) ([414279a](https://github.com/wmfs/sharepoint/commit/414279a076120c021558043025f41d7a95a1223b))
+* **deps-dev:** update dependency mocha to v12.0.3 ([#447](https://github.com/wmfs/sharepoint/issues/447)) ([107638a](https://github.com/wmfs/sharepoint/commit/107638a27565d3e544954cbcf830e5d25da2e818))
+* **deps:** update dependency axios to v1.20.0 [security] ([#418](https://github.com/wmfs/sharepoint/issues/418)) ([a91951c](https://github.com/wmfs/sharepoint/commit/a91951c81a7a659bde91cd01ecb269e7e5e65bea))
+* **deps:** update dependency uuid to v11.1.1 [security] ([#416](https://github.com/wmfs/sharepoint/issues/416)) ([8d37e0b](https://github.com/wmfs/sharepoint/commit/8d37e0b4015b83c95451ae44ceb6ac8ac7ceb5cc))
+
+### CICD Configuration Changes :construction_worker:
+
+* use github-app-token orb for release token [sc-34101] ([#456](https://github.com/wmfs/sharepoint/issues/456)) ([bc79e02](https://github.com/wmfs/sharepoint/commit/bc79e02648f912853571aa2ef5453db85859f153))
+* use shared renovate preset [sc-34117] ([#455](https://github.com/wmfs/sharepoint/issues/455)) ([f2f4ea8](https://github.com/wmfs/sharepoint/commit/f2f4ea869214af654b11c35d9d62aebccfde14a3))
+
 ## [1.62.1](https://github.com/wmfs/sharepoint/compare/v1.62.0...v1.62.1) (2026-08-13)
 
 ## [1.62.0](https://github.com/wmfs/sharepoint/compare/v1.61.0...v1.62.0) (2026-04-10)
