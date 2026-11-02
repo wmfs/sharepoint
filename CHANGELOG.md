@@ -1,3 +1,9 @@
+## [1.64.0](https://github.com/wmfs/sharepoint/compare/v1.63.0...v1.64.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency axios to v1.21.0 ([#458](https://github.com/wmfs/sharepoint/issues/458)) ([3f38d9f](https://github.com/wmfs/sharepoint/commit/3f38d9f87c6812d4860bce54e357ae45bb790127))
+
 ## [1.63.0](https://github.com/wmfs/sharepoint/compare/v1.62.1...v1.63.0) (2026-10-30)
 
 ### Build system dependencies :hammer:
