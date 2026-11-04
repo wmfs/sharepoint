@@ -1,3 +1,9 @@
+## [1.65.0](https://github.com/wmfs/sharepoint/compare/v1.64.0...v1.65.0) (2026-11-04)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency uuid to v14 ([#459](https://github.com/wmfs/sharepoint/issues/459)) ([c65dc78](https://github.com/wmfs/sharepoint/commit/c65dc78d5149bd4d5b8c70361a230996840f65a1))
+
 ## [1.64.0](https://github.com/wmfs/sharepoint/compare/v1.63.0...v1.64.0) (2026-11-02)
 
 ### Build system dependencies :hammer:
